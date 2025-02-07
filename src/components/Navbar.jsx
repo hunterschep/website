@@ -44,7 +44,7 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:block w-full">
-            <div className="flex justify-center items-center space-x-8 ml-48">
+            <div className="flex justify-center items-center space-x-8">
               <Link
                 to="/"
                 className="text-2xl font-bold hover:text-gray-300 transition duration-300"
@@ -64,8 +64,8 @@ const Navbar = () => {
                 Projects
               </Link>
               <Link
-                to="/contact"
-                className="text-2xl font-bold hover:text-gray-300 transition duration-300"
+                to="/"
+                className="text-2xl font-bold text-gray-500"
               >
                 Resume
               </Link>

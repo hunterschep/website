@@ -1,98 +1,58 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import InfiniteCarousel from './sub-components/InfiniteCarousel';
 
-const sections = [
-  { id: 'about', label: 'About' },
-  { id: 'education', label: 'Education' },
-  { id: 'research', label: 'Research Involvement' },
-  { id: 'campus', label: 'Campus Involvement' },
-  { id: 'experience', label: 'Professional Experience' },
-];
-
 const About = () => {
-  const [activeSection, setActiveSection] = useState('about');
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
-    // Use IntersectionObserver to detect which section is currently in view
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.6, // Adjust the threshold as needed
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (window.scrollY / totalHeight) * 100;
+      setScrollProgress(progress);
     };
 
-    const observers = [];
-
-    sections.forEach((section) => {
-      const element = document.getElementById(section.id);
-      if (!element) return;
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(section.id);
-          }
-        });
-      }, observerOptions);
-      observer.observe(element);
-      observers.push(observer);
-    });
-
-    return () => {
-      observers.forEach((observer) => observer.disconnect());
-    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className="min-h-screen w-full flex">
-      {/* Progress Bar Sidebar */}
-      <nav className="hidden md:flex fixed left-0 top-0 h-full w-48 flex-col items-center justify-center p-4 bg-transparent">
-        <ul className="space-y-4">
-          {sections.map((sec) => (
-            <li key={sec.id}>
-              <a
-                href={`#${sec.id}`}
-                className={`block px-3 py-1 rounded transition-colors ${
-                  activeSection === sec.id
-                    ? 'bg-white text-gray-900 font-bold'
-                    : 'text-white hover:bg-white hover:text-gray-900'
-                }`}
-              >
-                {sec.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <div className="min-h-screen w-full flex flex-col items-center">
+      {/* Scroll Progress Bar */}
+      <div className="fixed top-0 left-0 h-1 w-full bg-gray-800 z-50">
+        <div
+          className="h-full bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
 
       {/* Main Content */}
-      <div className="flex-1 ml-0 md:ml-56 p-4">
+      <div className="w-full max-w-5xl px-4 md:px-8 py-12">
         {/* About Section */}
-        <section id="about" className="mb-16">
+        <section id="about" className="mb-4 scroll-mt-20">
           <div className="flex flex-col items-center space-y-4">
-            {/* Profile Image linking to LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/hunterscheppat/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
                 src={process.env.PUBLIC_URL + '/personal/headshot.jpeg'}
                 alt="Hunter Scheppat"
-                className="w-32 h-32 rounded-full object-cover border-4 border-white"
+                className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-xl hover:scale-105 transition-transform"
               />
             </a>
-            {/* Social Links */}
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/hunterschep"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded text-white transition duration-300"
+                className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 GitHub
               </a>
               <a
-                href="mailto:your.email@example.com"
-                className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded text-white transition duration-300"
+                href="mailto:hunter.scheppat@bc.edu"
+                className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 Email Me
               </a>
@@ -100,41 +60,46 @@ const About = () => {
                 href="/path/to/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded text-white transition duration-300"
+                className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition-all duration-300 shadow-md hover:shadow-lg"
               >
-                Resume
+                Google Scholar
               </a>
             </div>
           </div>
-          <div className="mt-8 text-center max-w-3xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-bold text-white">
+          <div className="mt-8 text-center">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Hunter Scheppat
             </h1>
-            <p className="mt-4 text-lg text-white">
+            <p className="text-lg text-white bg-opacity-0 rounded-lg p-4 mx-auto max-w-lg shadow-md">
               <strong>Business Analyst / Data Scientist</strong>
             </p>
           </div>
         </section>
 
         {/* Education Section */}
-        <section id="education" className="mb-16">
-          <div className="max-w-3xl mx-auto text-white">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Education</h2>
-            <p className="text-lg">
+        <section id="education" className="mb-4 scroll-mt-20">
+          <div className="bg-opacity-0 rounded-2xl p-6 md:p-8 shadow-xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Education</h2>
+            <p className="text-lg mb-4 text-white">
               I am currently a <strong>junior at Boston College</strong> pursuing a{' '}
-              <strong>B.S. in Management</strong> and a <strong>B.A. in Computer Science</strong>. My coursework spans a broad range of subjects, fueling my passion for data analytics and business strategy.
+              <strong>B.S. in Management</strong> and a <strong>B.A. in Computer Science</strong>.
+            </p>
+            <p className="text-lg mb-4 text-white">
+              In the Carroll School of Management I am concentrating in <strong>Finance</strong> and <strong>Information Systems</strong>.
+              My B.A in Computer Science has equipped me with a strong understanding of algorithms, data structures, and software development.
+              I will graduate with both degrees in May 2026.
             </p>
           </div>
         </section>
 
         {/* Research Involvement Section */}
-        <section id="research" className="mb-16">
-          <div className="max-w-3xl mx-auto text-white">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Research Involvement</h2>
+        <section id="research" className="mb-4 scroll-mt-20">
+          <div className="bg-opacity-0 rounded-2xl p-6 md:p-8 shadow-xl text-white">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 ">Research Involvement</h2>
             <p className="text-lg mb-4">
               I have been part of several <strong>large-scale research projects</strong> at Boston College. Last year, I served as a research assistant for the{' '}
               <a
-                href="https://example.com/pushkin-project"
+                href="https://languagelearninglab.gitbook.io/pushkin"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
@@ -142,19 +107,19 @@ const About = () => {
                 Pushkin Project
               </a>, and worked as a lab member at the{' '}
               <a
-                href="https://example.com/ai4-communications"
+                href="https://ai4commsci.github.io/people.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
               >
                 AI4 Communication Sciences Lab
               </a>{' '}
-              at <strong>Mass General Hospital</strong> (formerly the Language Learning Lab at Boston College). My role involved writing tests in JavaScript and Selenium, performing bug testing, and updating technical documentation.
+              at <strong>Mass General Hospital </strong> (formerly the Language Learning Lab at Boston College). My role involved writing tests in JavaScript and Selenium, performing bug testing, and updating technical documentation.
             </p>
             <p className="text-lg">
-              This year, I joined an NSF REU-funded initiative on the <strong>Formosan Corpora/MT project</strong> under the same lab. With my dedicated team and advisor, we published a paper at the{' '}
+              This year, I joined an NSF REU-funded initiative on the <strong>Formosan Corpora/MT project</strong> under the same lab. We published a paper at the{' '}
               <a
-                href="https://example.com/computel2025"
+                href="https://computel-workshop.org/computel-8/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
@@ -162,15 +127,15 @@ const About = () => {
                 ComputEL 2025 Conference
               </a>. This research focused on machine translation methods for low-resource languages. Learn more on my{' '}
               <a
-                href="https://example.com/research"
+                href="/research"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
               >
                 research page
-              </a>, and explore our models on{' '}
+              </a>, and explore my models on{' '}
               <a
-                href="https://huggingface.co"
+                href="https://huggingface.co/hunterschep"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
@@ -182,8 +147,8 @@ const About = () => {
         </section>
 
         {/* Campus Involvement Section */}
-        <section id="campus" className="mb-16">
-          <div className="max-w-3xl mx-auto text-white">
+        <section id="campus" className="mb-4 scroll-mt-20">
+          <div className="bg-opacity-0 rounded-2xl p-6 md:p-8 shadow-xl text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Campus Involvement</h2>
             <p className="text-lg">
               I have taken on various leadership roles at Boston College. Currently, I serve as the <strong>President of the Computer Science Society</strong>, where I help manage a multi-thousand dollar budget, lead a 10+ member executive board, and organize events for over 100 active members.
@@ -208,12 +173,15 @@ const About = () => {
                 GitHub
               </a>.
             </p>
+            <p className="text-lg mt-4">
+              I've also worked as a Teaching Assistant most recently for CSCI1102: Data Structures. I held office hours, graded assignments, and led lab sections.
+            </p>
           </div>
         </section>
 
         {/* Professional Experience Section */}
-        <section id="experience" className="mb-16">
-          <div className="max-w-3xl mx-auto text-white">
+        <section id="experience" className="mb-4 scroll-mt-20">
+          <div className="bg-opacity-0 rounded-2xl p-6 md:p-8 shadow-xl text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Professional Experience</h2>
             <p className="text-lg mb-4">
               Last summer, I worked as a <strong>Data Analytics Intern</strong> at <strong>Liberty Mutual Insurance</strong>, where I analyzed emerging risks using SQL, Excel, PowerBI, and VBA to streamline routine tasks. I also investigated data discrepancies and automated monthly data warehousing using SAS/SQL.
@@ -225,10 +193,54 @@ const About = () => {
         </section>
 
         {/* Companies Section */}
-        <section id="companies" className="mb-16">
-          <div className="max-w-3xl mx-auto text-white">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Firms & Organizations</h2>
+        <section id="companies" className="mb-4 scroll-mt-20">
+          <div className="bg-opacity-0 rounded-2xl p-6 md:p-8 shadow-xl">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Firms & Organizations</h2>
             <InfiniteCarousel />
+          </div>
+        </section>
+
+        {/* Other Section */}
+        <section id="experience" className="mb-4 scroll-mt-20">
+          <div className="bg-opacity-0 rounded-2xl p-6 md:p-8 shadow-xl text-white">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Other Involvement</h2>
+            <p className="text-lg mb-4">
+              I was a member of the <strong>Pulse Program</strong> at <strong>BC</strong>, where I worked 8 hours per week at a local food pantry.
+              I primarily focused on client relations and service distribution. I helped file taxes during the spring 2024 season.
+            </p>
+            <p className="text-lg mb-4 text-white">
+              I graduated from Issaquah High School in May 2022. I help organize and award the <a
+                href="https://bold.org/scholarships/zachary-scheppat-memorial-science-scholarship/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                Zachary Scheppat Memorial Science Scholarship
+              </a> in honor of my late brother.
+            </p>
+            <p className="text-lg mb-4 text-white">
+              I sometimes write about my research and interests on my{' '}
+              <a
+                href="https://substack.com/@hunterscheppat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                blog. 
+              </a>
+              </p>
+              <p className="text-lg mb-4 text-white">
+              Some of my landscape photography from around the Pacific Northwest and Northeast has been featured on Washington Trails Assosciation
+              and other small small organization. {' '}
+              <a
+                href="https://hunterscheppat.myportfolio.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                My portfolio. 
+              </a>
+              </p>
           </div>
         </section>
       </div>
