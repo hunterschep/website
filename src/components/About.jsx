@@ -87,7 +87,7 @@ const About = () => {
             <p className="text-lg mb-4 text-white">
               In the Carroll School of Management I am concentrating in <strong>Finance</strong> and <strong>Information Systems</strong>.
               My B.A in Computer Science has equipped me with a strong understanding of algorithms, data structures, and software development.
-              I will graduate with both degrees in May 2026.
+              I'll graduate with both degrees in May 2026!
             </p>
           </div>
         </section>
@@ -107,7 +107,7 @@ const About = () => {
                 Pushkin Project
               </a>, and worked as a lab member at the{' '}
               <a
-                href="https://ai4commsci.github.io/people.html"
+                href="https://ai4commsci.github.io/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
@@ -161,7 +161,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 className="underline"
               >
-                website
+                website(coming soon!)
               </a>{' '}
               and view our projects on{' '}
               <a
@@ -187,7 +187,7 @@ const About = () => {
               Last summer, I worked as a <strong>Data Analytics Intern</strong> at <strong>Liberty Mutual Insurance</strong>, where I analyzed emerging risks using SQL, Excel, PowerBI, and VBA to streamline routine tasks. I also investigated data discrepancies and automated monthly data warehousing using SAS/SQL.
             </p>
             <p className="text-lg">
-              In summer 2025, I will be joining <strong>Deloitte</strong> as a Technology and Transformation Intern, focusing on cybersecurity initiatives.
+              In summer 2025, I will be joining <strong>Deloitte</strong> as a Technology and Transformation Intern, focusing on cybersecurity projects.
             </p>
           </div>
         </section>

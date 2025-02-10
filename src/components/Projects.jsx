@@ -29,6 +29,23 @@ const projectsData = [
       "Interactive AI data visualization chatbot with function calling and data analysis capabilities. Uses OpenAI API for natural language processing and data analysis. Provides a conversational interface for querying data and generating insights.",
     link: "https://hunterschep.github.io/hai-course/",
   },
+  {
+    id: 4, 
+    title: "Interactive Machine Translation",
+    image: "/projects/amis-mt.png",
+    technologies: "NLLB, Gradio, Python, OpenNMT, Transformers",
+    description: 
+      "Frontend with interactive demo for ComputEL 2025 research submission. Allows users to input text and see machine translation output. Uses NLLB to allow bidirectional translation between Amis and Mandarin Chinese. Provides a user-friendly interface for exploring the research results.",
+    link: "https://huggingface.co/spaces/hunterschep/ami-zh-translation",
+  },
+  { 
+    id: 5,
+    title: "Personal Website",
+    image: "/projects/website.png",
+    technologies: "React, Tailwind",
+    description: "My personal website built with React and Tailwind CSS. Features a responsive design, dark mode, and various sections to showcase my projects, research, and interests.",
+    link: "https://github.com/hunterschep/website",
+  }
   // Add more projects as needed
 ];
 

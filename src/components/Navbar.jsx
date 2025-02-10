@@ -69,7 +69,9 @@ const Navbar = () => {
               >
                 Resume
               </Link>
+              
             </div>
+            {/* End of Desktop Menu */}
           </div>
         </div>
       </div>

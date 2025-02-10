@@ -95,7 +95,7 @@ const Research = () => {
                   rel="noopener noreferrer"
                   className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded transition-colors"
                 >
-                  Read More
+                  Link coming soon!
                 </a>
               </div>
             ))}
