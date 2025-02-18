@@ -114,7 +114,7 @@ const About = () => {
               >
                 AI4 Communication Sciences Lab
               </a>{' '}
-              at <strong>Mass General Hospital </strong> (formerly the Language Learning Lab at Boston College). My role involved writing tests in JavaScript and Selenium, performing bug testing, and updating technical documentation.
+              at <strong>Mass General Hospital </strong> (formerly the Language Learning Lab at Boston College). My role involved writing tests in JavaScript and Selenium, performing bug testing, updating technical documentation, and modernizing security requirements in line with OpenSSF.
             </p>
             <p className="text-lg">
               This year, I joined an NSF REU-funded initiative on the <strong>Formosan Corpora/MT project</strong> under the same lab. We published a paper at the{' '}
@@ -231,7 +231,7 @@ const About = () => {
               </p>
               <p className="text-lg mb-4 text-white">
               Some of my landscape photography from around the Pacific Northwest and Northeast has been featured on Washington Trails Assosciation
-              and other small small organization. {' '}
+              and other small small organizations. {' '}
               <a
                 href="https://hunterscheppat.myportfolio.com/"
                 target="_blank"
