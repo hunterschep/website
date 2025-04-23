@@ -13,6 +13,15 @@ const projectsData = [
   },
   {
     id: 2,
+    title: "Flock",
+    image: "/projects/flock.png",
+    technologies: "React, Tailwind, Postgres, Prisma, React-Query",
+    description:
+      "A student connectivity system developed jointly with @Rafael Singer that currently has 250+ users. Allows for grads and interns to connect. Features Google auth, messaging, and preference management. ", 
+    link: "https://github.com/rafaelsinger/flock",
+  },
+  {
+    id: 3,
     title: "College Earnings",
     image: "/projects/college-earnings.png",
     technologies: "Python, Streamlit",
@@ -21,7 +30,7 @@ const projectsData = [
     link: "https://college-earnings.streamlit.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "AI Chatbot",
     image: "/projects/hai-course.png",
     technologies: "React, Tailwind, FastAPI, OpenAI API",
@@ -30,7 +39,7 @@ const projectsData = [
     link: "https://hunterschep.github.io/hai-course/",
   },
   {
-    id: 4, 
+    id: 5, 
     title: "Interactive Machine Translation",
     image: "/projects/amis-mt.png",
     technologies: "NLLB, Gradio, Python, OpenNMT, Transformers",
@@ -39,7 +48,7 @@ const projectsData = [
     link: "https://huggingface.co/spaces/hunterschep/ami-zh-translation",
   },
   { 
-    id: 5,
+    id: 6,
     title: "Personal Website",
     image: "/projects/website.png",
     technologies: "React, Tailwind",

@@ -161,7 +161,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 className="underline"
               >
-                website(coming soon!)
+                website
               </a>{' '}
               and view our projects on{' '}
               <a
