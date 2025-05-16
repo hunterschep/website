@@ -47,13 +47,13 @@ const projectsData = [
       "Frontend with interactive demo for ComputEL 2025 research submission. Allows users to input text and see machine translation output. Uses NLLB to allow bidirectional translation between Amis and Mandarin Chinese. Provides a user-friendly interface for exploring the research results.",
     link: "https://huggingface.co/spaces/hunterschep/ami-zh-translation",
   },
-  { 
+  {
     id: 6,
-    title: "Personal Website",
-    image: "/projects/website.png",
-    technologies: "React, Tailwind",
-    description: "My personal website built with React and Tailwind CSS. Features a responsive design, dark mode, and various sections to showcase my projects, research, and interests.",
-    link: "https://github.com/hunterschep/website",
+    title: "Air Quality Dashboard",
+    image: "/projects/boston-aq.png",
+    technologies: "ReactJS, Leaflet, Open-Mateo API ",
+    description: "Live air quality dashboard for Boston, MA. Uses the Open-Mateo API to get air quality data. Displays a map of Boston with air quality data for each neighborhood. Allows users to toggle between different air quality metrics and view historical data.",
+    link: "https://hunterschep.github.io/chem-final-project/",
   }
   // Add more projects as needed
 ];

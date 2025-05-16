@@ -227,11 +227,19 @@ const About = () => {
                 className="underline"
               >
                 blog. 
+              </a> My writing was featured in the{' '}  
+              <a
+                href="https://www.wsj.com/opinion/is-your-data-private-anymore-technology-social-media-safety-personalization-157035c0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                Wall Street Journal.
               </a>
-              </p>
-              <p className="text-lg mb-4 text-white">
-              Some of my landscape photography from around the Pacific Northwest and Northeast has been featured on Washington Trails Assosciation
-              and other small small organizations. {' '}
+            </p>
+            <p className="text-lg mb-4 text-white">   
+              Some of my landscape photography from around the Pacific Northwest and Northeast has been featured on Washington Trails Association
+              and other small organizations. {' '}
               <a
                 href="https://hunterscheppat.myportfolio.com/"
                 target="_blank"
@@ -240,7 +248,7 @@ const About = () => {
               >
                 My portfolio. 
               </a>
-              </p>
+            </p>
           </div>
         </section>
       </div>

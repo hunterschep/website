@@ -34,6 +34,7 @@ const researchInterests = [
   "Experiments on Low Resource Languages",
   "Natural Language Processing",
   "Interactive Machine Learning Systems",
+  "General NLP Applications",
 ];
 
 const Research = () => {
