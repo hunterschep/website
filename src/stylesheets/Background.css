@@ -1,12 +1,17 @@
 @keyframes flicker {
     0%, 100% {
-        opacity: 0.2;
+        opacity: 0.1;
     }
     50% {
-        opacity: 1;
+        opacity: 0.8;
     }
 }
 
 .animate-flicker {
     animation: flicker 3s infinite ease-in-out;
+}
+
+/* Ensure stars are visible on all backgrounds */
+.bg-white {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
 }

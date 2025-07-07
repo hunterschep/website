@@ -7,7 +7,7 @@ const researchPublications = [
     title:
       "Integrating diverse corpora for training an endangered language machine translation system",
     authors:
-      "Hunter Scheppat, Joshua K. Hartshorne, Dylan Leddy, Éric Le Ferrand, Emily Prud’hommeaux",
+      "Hunter Scheppat, Joshua K. Hartshorne, Dylan Leddy, Éric Le Ferrand, Emily Prud'hommeaux",
     journal:
       "Workshop: ComputEL 8 - The Use of Computational Methods in the Study of Endangered Languages",
     year: "2025",
@@ -63,7 +63,7 @@ const Research = () => {
               Overview
             </h2>
             <p className="text-lg">
-              I’m passionate about machine translation for low resource
+              I'm passionate about machine translation for low resource
               languages, with a specific focus on the Formosan language family.
               I experiment with various methods to enhance machine translation
               performance by leveraging data augmentation, pivot languages, and
@@ -90,14 +90,27 @@ const Research = () => {
                   {paper.journal}, {paper.year}
                 </p>
                 <p className="mb-4">{paper.description}</p>
-                <a
-                  href={paper.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded transition-colors"
-                >
-                  Link coming soon!
-                </a>
+                {paper.id === 1 ? (
+                  <div className="flex flex-wrap gap-3 mt-2">
+                    <a
+                      href="https://ufl.zoom.us/rec/play/7NoaD3Pjkyw1CoIj9roJ0IIflzVe6VQ-llA7aovSK8bVbbbqnQALMXoOGAuFGXqTDWw2LjEpSG0DffzL.1gg9eoxLXaklyZEC?startTime=1741230485000"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded transition-colors"
+                    >
+                      Watch Presentation
+                    </a>
+                    <span className="inline-block px-4 py-2 bg-gray-600 text-white rounded cursor-default" title="The formal paper will be published in the ACL Anthology soon">
+                      Paper (Coming Soon)
+                    </span>
+                  </div>
+                ) : (
+                  <div className="mt-2">
+                    <span className="inline-block px-4 py-2 bg-gray-600 text-white rounded cursor-default">
+                      Coming Soon
+                    </span>
+                  </div>
+                )}
               </div>
             ))}
           </div>

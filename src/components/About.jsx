@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import InfiniteCarousel from './sub-components/InfiniteCarousel';
+import CompanyGrid from './sub-components/InfiniteCarousel';
 
 const About = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -57,12 +57,12 @@ const About = () => {
                 Email Me
               </a>
               <a
-                href="/path/to/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition-all duration-300 shadow-md hover:shadow-lg"
+                href="#"
+                onClick={(e) => e.preventDefault()}
+                className="px-4 py-2 bg-gray-600 hover:bg-gray-500 rounded-lg text-white transition-all duration-300 shadow-md hover:shadow-lg cursor-default"
+                title="Coming soon - waiting for official paper proceeding for ComputEL 8"
               >
-                Google Scholar
+                Google Scholar (Coming Soon)
               </a>
             </div>
           </div>
@@ -71,7 +71,16 @@ const About = () => {
               Hunter Scheppat
             </h1>
             <p className="text-lg text-white bg-opacity-0 rounded-lg p-4 mx-auto max-w-lg shadow-md">
-              <strong>Business Analyst / Data Scientist</strong>
+              <strong>Interested in:</strong>
+              <div className="flex flex-wrap justify-center gap-2 mt-2">
+                <span className="px-2 py-1 bg-blue-900 bg-opacity-50 rounded-md text-sm">Software Engineering</span>
+                <span className="px-2 py-1 bg-purple-900 bg-opacity-50 rounded-md text-sm">Product Management</span>
+                <span className="px-2 py-1 bg-indigo-900 bg-opacity-50 rounded-md text-sm">Program Management</span>
+                <span className="px-2 py-1 bg-blue-900 bg-opacity-50 rounded-md text-sm">Data Analytics</span>
+                <span className="px-2 py-1 bg-purple-900 bg-opacity-50 rounded-md text-sm">Business Intelligence</span>
+                <span className="px-2 py-1 bg-indigo-900 bg-opacity-50 rounded-md text-sm">Solutions Engineering</span>
+                <span className="px-2 py-1 bg-blue-900 bg-opacity-50 rounded-md text-sm">Sales Engineering</span>
+              </div>
             </p>
           </div>
         </section>
@@ -196,7 +205,7 @@ const About = () => {
         <section id="companies" className="mb-4 scroll-mt-20">
           <div className="bg-opacity-0 rounded-2xl p-6 md:p-8 shadow-xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Firms & Organizations</h2>
-            <InfiniteCarousel />
+            <CompanyGrid />
           </div>
         </section>
 

@@ -1,30 +1,57 @@
 import React from "react";
 
 // List of photo paths (adjust the paths as needed)
-const photos = [
-  "/companies/ai4commscipng.png",
-  "/companies/Deloitte.png",
-  "/companies/liberty.png",
-  "/companies/nsf.png",
-  "/companies/bccss.png",
+const companies = [
+  {
+    name: "AI4 Communication Sciences",
+    logo: "/companies/ai4commscipng.png",
+    link: "https://ai4commsci.github.io/"
+  },
+  {
+    name: "Deloitte",
+    logo: "/companies/Deloitte.png",
+    link: "https://www2.deloitte.com/"
+  },
+  {
+    name: "Liberty Mutual",
+    logo: "/companies/liberty.png",
+    link: "https://www.libertymutual.com/"
+  },
+  {
+    name: "National Science Foundation",
+    logo: "/companies/nsf.png",
+    link: "https://www.nsf.gov/"
+  },
+  {
+    name: "BC Computer Science Society",
+    logo: "/companies/bccss.png",
+    link: "https://bccss.co/"
+  },
 ];
 
-const InfiniteCarousel = () => {
+const CompanyGrid = () => {
   return (
-    <div className="w-full overflow-hidden bg-white rounded-lg shadow-glow-white">      {/* The inner container is duplicated (photos + photos) so the scroll loops seamlessly */}
-      <div className="flex animate-marquee">
-        {[...photos, ...photos].map((src, index) => (
-          <div key={index} className="flex-shrink-0 mx-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 py-4">
+      {companies.map((company, index) => (
+        <a 
+          key={index} 
+          href={company.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col items-center group transition-all"
+        >
+          <div className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 w-full flex items-center justify-center h-32">
             <img
-              src={process.env.PUBLIC_URL + src}
-              alt={`Company ${index}`}
-              className="h-20 w-auto object-contain" // Adjust height as needed
+              src={process.env.PUBLIC_URL + company.logo}
+              alt={company.name}
+              className="max-h-20 max-w-full object-contain group-hover:scale-105 transition-transform"
             />
           </div>
-        ))}
-      </div>
+          <span className="mt-2 text-sm text-gray-300 text-center">{company.name}</span>
+        </a>
+      ))}
     </div>
   );
 };
 
-export default InfiniteCarousel;
+export default CompanyGrid;

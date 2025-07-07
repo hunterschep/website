@@ -10,6 +10,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000;
+  color: white;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  min-height: 100vh;
+  position: relative;
+}
+
+html {
+  background-color: #000;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 code {

@@ -63,13 +63,14 @@ const Navbar = () => {
               >
                 Projects
               </Link>
-              <Link
-                to="/"
-                className="text-2xl font-bold text-gray-500"
+              <a
+                href="https://drive.google.com/file/d/1lQQU-Un7ydM1GjUjRU63HB0I9sT5th2f/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl font-bold hover:text-gray-300 transition duration-300"
               >
                 Resume
-              </Link>
-              
+              </a>
             </div>
             {/* End of Desktop Menu */}
           </div>
@@ -100,13 +101,15 @@ const Navbar = () => {
           >
             Projects
           </Link>
-          <Link
-            to="/contact"
+          <a
+            href="https://drive.google.com/file/d/1lQQU-Un7ydM1GjUjRU63HB0I9sT5th2f/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
             className="block text-2xl font-bold hover:text-gray-300 transition duration-300"
           >
             Resume
-          </Link>
+          </a>
         </div>
       )}
     </nav>

@@ -9,29 +9,22 @@ import Research from './components/Research';
 
 function App() {
   return (
-    // Parent container with relative positioning and min-height to cover the viewport
-    <div className="relative min-h-screen">
-      {/* Background component rendered behind everything */}
+    <>
+      {/* Background with stars - positioned fixed and covers entire viewport */}
       <Background />
-
-      {/* Main content container with a higher z-index */}
-      <div className="relative z-10">
-        {/* Horizontal Navbar at the top */}
-        <Navbar />
-
-        {/* Page content below the navbar */}
-        <div className="p-8">
+      
+      {/* Content container */}
+      <div className="App relative" style={{ backgroundColor: 'transparent', minHeight: '100vh' }}>
+        <div className="relative z-10">
+          <Navbar />
           <Routes>
-            {/* Default route shows the About page */}
             <Route path="/" element={<About />} />
-            {/* Other routes */}
-            <Route path="/projects" element={<Projects />} />
             <Route path="/research" element={<Research />} />
-            {/* Optionally add a route for /contact */}
+            <Route path="/projects" element={<Projects />} />
           </Routes>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
