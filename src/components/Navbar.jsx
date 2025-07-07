@@ -64,7 +64,7 @@ const Navbar = () => {
                 Projects
               </Link>
               <a
-                href="https://drive.google.com/file/d/1lQQU-Un7ydM1GjUjRU63HB0I9sT5th2f/view?usp=sharing"
+                href="https://drive.google.com/file/d/1Lkt3DRC1ncp7lVdHrS4-wtcaEkj0N5YL/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-2xl font-bold hover:text-gray-300 transition duration-300"
@@ -102,7 +102,7 @@ const Navbar = () => {
             Projects
           </Link>
           <a
-            href="https://drive.google.com/file/d/1lQQU-Un7ydM1GjUjRU63HB0I9sT5th2f/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Lkt3DRC1ncp7lVdHrS4-wtcaEkj0N5YL/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
