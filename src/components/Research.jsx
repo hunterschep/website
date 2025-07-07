@@ -13,7 +13,7 @@ const researchPublications = [
     year: "2025",
     description:
       "Machine translation (MT) can support endangered language documentation and usage, but most lack sufficient parallel corpora for training effective models. This study repurposes diverse data sources to train MT systems for Amis, an Indigenous language of Taiwan, and supplements limited Amis-English data by generating synthetic translations from an Amis-Mandarin corpus. Results show that synthetic data improves translation to English but not from English, and no single MT system consistently outperforms the other, emphasizing the need to experiment with multiple training approaches for optimal performance.",
-    link: "https://example.com/coming-soon",
+    link: "https://computel-workshop.org/wp-content/uploads/2025/05/CEL-8_Proceedings.pdf",
   },
   {
     id: 2,
@@ -96,13 +96,20 @@ const Research = () => {
                       href="https://ufl.zoom.us/rec/play/7NoaD3Pjkyw1CoIj9roJ0IIflzVe6VQ-llA7aovSK8bVbbbqnQALMXoOGAuFGXqTDWw2LjEpSG0DffzL.1gg9eoxLXaklyZEC?startTime=1741230485000"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded transition-colors"
+                      className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300"
+                      tabIndex={0}
                     >
                       Watch Presentation
                     </a>
-                    <span className="inline-block px-4 py-2 bg-gray-600 text-white rounded cursor-default" title="The formal paper will be published in the ACL Anthology soon">
-                      Paper (Coming Soon)
-                    </span>
+                    <a
+                      href="https://computel-workshop.org/wp-content/uploads/2025/05/CEL-8_Proceedings.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-4 py-2 bg-green-600 hover:bg-green-500 text-white rounded transition-colors focus:outline-none focus:ring-2 focus:ring-green-300"
+                      tabIndex={0}
+                    >
+                      View Paper
+                    </a>
                   </div>
                 ) : (
                   <div className="mt-2">
