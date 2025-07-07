@@ -57,12 +57,12 @@ const About = () => {
                 Email Me
               </a>
               <a
-                href="#"
+                href="https://scholar.google.com/citations?user=MsjRFU8AAAAJ&hl=en"
                 onClick={(e) => e.preventDefault()}
                 className="px-4 py-2 bg-gray-600 hover:bg-gray-500 rounded-lg text-white transition-all duration-300 shadow-md hover:shadow-lg cursor-default"
                 title="Coming soon - waiting for official paper proceeding for ComputEL 8"
               >
-                Google Scholar (Coming Soon)
+                Google Scholar 
               </a>
             </div>
           </div>
