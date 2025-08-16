@@ -58,9 +58,11 @@ const About = () => {
               </a>
               <a
                 href="https://scholar.google.com/citations?user=MsjRFU8AAAAJ&hl=en"
-                className="px-4 py-2 bg-gray-600 hover:bg-gray-500 rounded-lg text-white transition-all duration-300 shadow-md hover:shadow-lg cursor-default"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg text-white transition-all duration-300 shadow-md hover:shadow-lg"
               >
-                Google Scholar 
+                Google Scholar
               </a>
             </div>
           </div>
@@ -191,10 +193,13 @@ const About = () => {
           <div className="bg-opacity-0 rounded-2xl p-6 md:p-8 shadow-xl text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Professional Experience</h2>
             <p className="text-lg mb-4">
-              Last summer, I worked as a <strong>Data Analytics Intern</strong> at <strong>Liberty Mutual Insurance</strong>, where I analyzed emerging risks using SQL, Excel, PowerBI, and VBA to streamline routine tasks. I also investigated data discrepancies and automated monthly data warehousing using SAS/SQL.
+              <strong>Summer 2025:</strong> I worked for <strong>Deloitte</strong> in their Technology and Transformation Consulting practice, specifically aligned to Digital Trust & Privacy. I worked on a project to help a large financial institution improve their data security posture from strategy to implementation. I used tools like the Microsoft Office suite, PowerBI, PowerShell, Python, and SaaS applications like Forcepoint, Forescout, and CrowdStrike to support analysis and implementation.
+            </p>
+            <p className="text-lg mb-4">
+              <strong>Summer 2024:</strong> I worked as a <strong>Data Analytics Intern</strong> at <strong>Liberty Mutual Insurance</strong>, where I analyzed emerging risks using SQL, Excel, PowerBI, and VBA to streamline routine tasks. I also investigated data discrepancies and automated monthly data warehousing using SAS/SQL.
             </p>
             <p className="text-lg">
-              In summer 2025, I will be joining <strong>Deloitte</strong> as a Technology and Transformation Intern, focusing on cybersecurity projects.
+              <strong>Summer 2023:</strong> I worked as a summer camp counselor! Ask me about this experience.
             </p>
           </div>
         </section>
