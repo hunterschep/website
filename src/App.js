@@ -10,19 +10,17 @@ import Research from './components/Research';
 function App() {
   return (
     <>
-      {/* Background with stars - positioned fixed and covers entire viewport */}
+      {/* Classic academic website background */}
       <Background />
       
-      {/* Content container */}
-      <div className="App relative" style={{ backgroundColor: 'transparent', minHeight: '100vh' }}>
-        <div className="relative z-10">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<About />} />
-            <Route path="/research" element={<Research />} />
-            <Route path="/projects" element={<Projects />} />
-          </Routes>
-        </div>
+      {/* Content container - simple and clean */}
+      <div style={{ fontFamily: 'Times New Roman, serif', minHeight: '100vh', position: 'relative', zIndex: 10 }}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<About />} />
+          <Route path="/research" element={<Research />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
       </div>
     </>
   );

@@ -1,93 +1,90 @@
 import React from 'react';
 
-// Sample project data with image URLs added. Replace the image URLs with your own images.
-const projectsData = [
-  {
-    id: 1,
-    title: "EasyCanvas",
-    image: "/projects/easycanvas.png",
-    technologies: "React, Tailwind, Python, Firebase, FastAPI, Anthropic API",
-    description:
-      "A streamlined interface for Canvas LMS that simplifies managing your courses and assignments. Uses real Canvas LMS data from read-only API keys. Provides a more intuitive and user-friendly experience for students and instructors. Leverages Firebase for authentication and FastAPI for serverless functions. Provides custom analytics, notifications, and built in AI features. (WIP)",
-    link: "https://github.com/hunterschep/easycanvas",
-  },
-  {
-    id: 2,
-    title: "Flock",
-    image: "/projects/flock.png",
-    technologies: "React, Tailwind, Postgres, Prisma, React-Query",
-    description:
-      "A student connectivity system developed jointly with @Rafael Singer that currently has 250+ users. Allows for grads and interns to connect. Features Google auth, messaging, and preference management. ", 
-    link: "https://github.com/rafaelsinger/flock",
-  },
-  {
-    id: 3,
-    title: "College Earnings",
-    image: "/projects/college-earnings.png",
-    technologies: "Python, Streamlit",
-    description:
-      "Streamlit dashboard that displays Dept. of Education college data. Users can filter by degree, major, and college to see earnings data. Provides insights into the earning potential of different degrees and majors",
-    link: "https://college-earnings.streamlit.app/",
-  },
-  {
-    id: 4,
-    title: "AI Chatbot",
-    image: "/projects/hai-course.png",
-    technologies: "React, Tailwind, FastAPI, OpenAI API",
-    description:
-      "Interactive AI data visualization chatbot with function calling and data analysis capabilities. Uses OpenAI API for natural language processing and data analysis. Provides a conversational interface for querying data and generating insights.",
-    link: "https://hunterschep.github.io/hai-course/",
-  },
-  {
-    id: 5, 
-    title: "Interactive Machine Translation",
-    image: "/projects/amis-mt.png",
-    technologies: "NLLB, Gradio, Python, OpenNMT, Transformers",
-    description: 
-      "Frontend with interactive demo for ComputEL 2025 research submission. Allows users to input text and see machine translation output. Uses NLLB to allow bidirectional translation between Amis and Mandarin Chinese. Provides a user-friendly interface for exploring the research results.",
-    link: "https://huggingface.co/spaces/hunterschep/ami-zh-translation",
-  },
-  {
-    id: 6,
-    title: "Air Quality Dashboard",
-    image: "/projects/boston-aq.png",
-    technologies: "ReactJS, Leaflet, Open-Mateo API ",
-    description: "Live air quality dashboard for Boston, MA. Uses the Open-Mateo API to get air quality data. Displays a map of Boston with air quality data for each neighborhood. Allows users to toggle between different air quality metrics and view historical data.",
-    link: "https://hunterschep.github.io/chem-final-project/",
-  }
-  // Add more projects as needed
-];
-
 const Projects = () => {
   return (
-    <div className="min-h-screen align-center max-w-8xl bg-transparent text-white p-8">
-      <h1 className="text-4xl font-bold text-center mb-12">My Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projectsData.map((project) => (
-          <div
-            key={project.id}
-            className="bg-black bg-opacity-50 p-6 rounded-lg shadow-lg border border-white"
-          >
-            {/* Project Image */}
-            <img
-              src={process.env.PUBLIC_URL + project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover mb-4 rounded-lg"
-            />
-            <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
-            <p className="text-sm italic mb-4">{project.technologies}</p>
-            <p className="mb-4">{project.description}</p>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-4 py-2 bg-white text-black rounded hover:bg-gray-300 transition-colors duration-300"
-            >
-              View Project
-            </a>
-          </div>
-        ))}
+    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', fontFamily: 'Times New Roman, serif' }}>
+      
+      <h1 style={{ fontSize: '24px', textAlign: 'center', borderBottom: '2px solid #000', paddingBottom: '10px', marginBottom: '30px' }}>
+        Software Projects
+      </h1>
+
+      <div className="section">
+        <h3><strong>EasyCanvas</strong> - Canvas LMS Interface Enhancement</h3>
+        <p><em>Technologies:</em> React, Python, Firebase, FastAPI, Anthropic API</p>
+        <p>Streamlined interface for Canvas LMS that simplifies course and assignment management. 
+        Integrates with Canvas API for real-time data, includes custom analytics and AI-powered features. 
+        Currently in development with authentication via Firebase and serverless backend.</p>
+        <p><strong>Link:</strong> <a href="https://github.com/hunterschep/easycanvas" target="_blank" rel="noopener noreferrer">
+          https://github.com/hunterschep/easycanvas
+        </a></p>
+        <br />
       </div>
+
+      <div className="section">
+        <h3><strong>Flock</strong> - Student Connectivity Platform</h3>
+        <p><em>Technologies:</em> React, PostgreSQL, Prisma, React-Query</p>
+        <p>Student networking platform developed with @Rafael Singer serving 250+ active users. 
+        Facilitates connections between graduates and interns with Google OAuth, real-time messaging, 
+        and preference management systems.</p>
+        <p><strong>Link:</strong> <a href="https://github.com/rafaelsinger/flock" target="_blank" rel="noopener noreferrer">
+          https://github.com/rafaelsinger/flock
+        </a></p>
+        <br />
+      </div>
+
+      <div className="section">
+        <h3><strong>College Earnings Dashboard</strong> - Education Data Visualization</h3>
+        <p><em>Technologies:</em> Python, Streamlit</p>
+        <p>Interactive dashboard displaying Department of Education college earnings data. 
+        Enables filtering by degree type, major, and institution with comparative analytics 
+        for educational investment decisions.</p>
+        <p><strong>Link:</strong> <a href="https://college-earnings.streamlit.app/" target="_blank" rel="noopener noreferrer">
+          https://college-earnings.streamlit.app/
+        </a></p>
+        <br />
+      </div>
+
+      <div className="section">
+        <h3><strong>AI Data Visualization Chatbot</strong> - Conversational Analytics Interface</h3>
+        <p><em>Technologies:</em> React, FastAPI, OpenAI API</p>
+        <p>Interactive chatbot with function calling capabilities for data analysis and visualization. 
+        Provides natural language interface for querying datasets and generating analytical insights.</p>
+        <p><strong>Link:</strong> <a href="https://hunterschep.github.io/hai-course/" target="_blank" rel="noopener noreferrer">
+          https://hunterschep.github.io/hai-course/
+        </a></p>
+        <br />
+      </div>
+
+      <div className="section">
+        <h3><strong>Interactive Machine Translation Demo</strong> - Research Interface</h3>
+        <p><em>Technologies:</em> NLLB, Gradio, Python, OpenNMT, Transformers</p>
+        <p>Web interface for ComputEL 2025 research demonstrating bidirectional translation 
+        between Amis and Mandarin Chinese. Provides user-friendly exploration of low-resource 
+        language machine translation results.</p>
+        <p><strong>Link:</strong> <a href="https://huggingface.co/spaces/hunterschep/ami-zh-translation" target="_blank" rel="noopener noreferrer">
+          https://huggingface.co/spaces/hunterschep/ami-zh-translation
+        </a></p>
+        <br />
+      </div>
+
+      <div className="section">
+        <h3><strong>Boston Air Quality Dashboard</strong> - Environmental Data Visualization</h3>
+        <p><em>Technologies:</em> React, Leaflet, Open-Meteo API</p>
+        <p>Real-time air quality monitoring system for Boston metropolitan area. 
+        Interactive mapping with neighborhood-level data, historical trends, and 
+        multiple air quality metrics visualization.</p>
+        <p><strong>Link:</strong> <a href="https://hunterschep.github.io/chem-final-project/" target="_blank" rel="noopener noreferrer">
+          https://hunterschep.github.io/chem-final-project/
+        </a></p>
+        <br />
+      </div>
+
+      <hr style={{ margin: '30px 0', border: '1px solid #ccc' }} />
+      <p style={{ fontSize: '12px', textAlign: 'center', color: '#666', fontStyle: 'italic' }}>
+        For additional projects and code repositories, visit: 
+        <a href="https://github.com/hunterschep" target="_blank" rel="noopener noreferrer"> GitHub</a>
+      </p>
+
     </div>
   );
 };
