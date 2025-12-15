@@ -2,26 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Classic Academic Website - Retro 2000s Professor Style */
 
-body {
-  margin: 0;
-  font-family: 'Times New Roman', Times, serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #fff;
-  color: #000;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  min-height: 100vh;
-  position: relative;
-  line-height: 1.4;
+* {
+  box-sizing: border-box;
 }
 
 html {
-  background-color: #fff;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: #d0d0d0;
+  overflow-x: hidden;
+  min-height: 100%;
+  width: 100%;
 }
 
-/* Classic academic website styles */
+body {
+  margin: 0;
+  padding: 20px 0;
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #000;
+  background-color: #d0d0d0;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#root {
+  background-color: #d0d0d0;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Classic blue hyperlinks - the 2000s way */
 a {
   color: #0000EE;
   text-decoration: underline;
@@ -32,42 +46,208 @@ a:visited {
 }
 
 a:hover {
+  color: #CC0000;
+}
+
+a:active {
   color: #FF0000;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Times New Roman', Times, serif;
+/* Headers */
+h1 {
+  font-size: 24px;
   font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
+  font-family: 'Times New Roman', Times, Georgia, serif;
 }
 
-.academic-header {
-  border-bottom: 2px solid #000;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+  font-family: 'Times New Roman', Times, Georgia, serif;
 }
 
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 15px 0 8px 0;
+  font-family: 'Times New Roman', Times, Georgia, serif;
+}
+
+p {
+  margin: 8px 0;
+}
+
+ul {
+  margin: 5px 0;
+  padding-left: 25px;
+}
+
+li {
+  margin: 3px 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #999;
+  margin: 20px 0;
+}
+
+/* Main container */
+.main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 3px solid #222;
+  min-height: calc(100vh - 40px);
+  box-shadow: 4px 4px 0px #222;
+}
+
+/* Content area inside container */
+.content-area {
+  padding: 20px 25px 30px 25px;
+}
+
+/* Navigation bar - BC Maroon */
+.navbar {
+  background-color: #8a100b;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 2px solid #222;
+}
+
+.navbar a {
+  margin: 0 8px;
+  white-space: nowrap;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ffd700 !important;
+  text-decoration: underline;
+}
+
+.navbar a:visited {
+  color: #fff !important;
+}
+
+.nav-separator {
+  color: #ddd;
+}
+
+/* Section styling */
 .section {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
+.section-header {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+}
+
+/* What's New section */
+.news-item {
+  margin-bottom: 8px;
+  padding-left: 0;
+}
+
+.news-date {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Publication styling */
+.publication {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  text-indent: -20px;
+}
+
+.pub-links {
+  font-size: 13px;
+  margin-top: 3px;
+  text-indent: 0;
+  padding-left: 20px;
+}
+
+/* Project styling */
+.project-item {
+  margin-bottom: 18px;
+}
+
+.project-title {
+  font-weight: bold;
+}
+
+.project-tech {
+  font-style: italic;
+  font-size: 13px;
+  color: #444;
+}
+
+/* Photo styling */
+.headshot {
+  border: 1px solid #000;
+  margin-right: 15px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+  margin-top: 25px;
+}
+
+/* Table styling - classic academic */
 table {
   border-collapse: collapse;
-  width: 100%;
+  font-size: 14px;
 }
 
-th, td {
-  border: 1px solid #000;
-  padding: 8px;
-  text-align: left;
+td {
+  padding: 3px 10px 3px 0;
+  vertical-align: top;
 }
 
-th {
-  background-color: #f0f0f0;
+/* Blockquote for abstracts */
+blockquote {
+  margin: 10px 0 10px 20px;
+  padding-left: 10px;
+  border-left: 2px solid #ccc;
+  font-size: 14px;
+  color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  
+  .main-container {
+    border-width: 2px;
+  }
+  
+  .content-area {
+    padding: 15px;
+  }
+  
+  .headshot {
+    float: none;
+    display: block;
+    margin: 0 auto 15px auto;
+  }
+  
+  .bio-section {
+    display: block !important;
+  }
 }
