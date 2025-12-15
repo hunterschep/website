@@ -12,25 +12,25 @@ const Research = () => {
         I am particularly interested in:
       </p>
       <ul>
-        <li>Machine Translation for Low-Resource Languages</li>
-        <li>Computational Methods for Endangered Language Documentation</li>
-        <li>Natural Language Processing</li>
-        <li>Data Augmentation and Synthetic Data Generation</li>
-        <li>Pivot Translation Methods</li>
-        <li>Interactive Machine Learning Systems</li>
+        <li>● Machine Translation for Low-Resource Languages</li>
+        <li>● Computational Methods for Endangered Language Documentation</li>
+        <li>● Natural Language Processing</li>
+        <li>● Data Augmentation and Synthetic Data Generation</li>
+        <li>● Pivot Translation Methods</li>
+        <li>● Interactive Machine Learning Systems</li>
       </ul>
 
       {/* Current Research */}
       <h2>Current Work</h2>
       <p>
-        I am currently a Research Assistant at the <a href="https://ai4commsci.github.io/" target="_blank" rel="noopener noreferrer">AI4 Communication Sciences Lab</a> at 
-        Massachusetts General Hospital, working under the supervision of Dr. Emily Prud'hommeaux. 
-        My work is funded by an NSF REU grant focused on Formosan language corpora and machine translation.
+        I am currently a Research Assistant at the <a href="https://ai4commsci.github.io/" target="_blank" rel="noopener noreferrer">AI4 Communication Sciences Lab</a>, working 
+        under the supervision of Dr. Emily Prud'hommeaux. 
+        My work is funded by an NSF REU grant focused on Formosan language corpora.
       </p>
       <p>
         I investigate methods to enhance translation performance for Formosan languages (indigenous languages of Taiwan) 
         through data augmentation, pivot languages, and integration of diverse corpora. Current work utilizes 
-        state-of-the-art models and libraries including mBART, NLLB, OpenNMT, and Fairseq.
+        models and libraries including mBART, NLLB, OpenNMT, and Fairseq.
       </p>
 
       {/* Publications */}
