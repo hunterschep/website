@@ -35,6 +35,14 @@ const Research = () => {
 
       {/* Publications */}
       <h2>Publications</h2>
+
+      <div className="publication">
+        <strong>Coming Soon:</strong><br />
+        FormosanMT: A Multilingual Parallel Corpus of the Formosan Language Family<br />
+        <span style={{ color: '#888' }}>
+          Accepted at LREC 2026. Publication pending.
+        </span>
+      </div>
       
       <div className="publication">
         <strong>Hunter Scheppat</strong>, Joshua Hartshorne, Dylan Leddy, Éric Le Ferrand, and Emily Prud'hommeaux. 2025. 
@@ -64,10 +72,11 @@ const Research = () => {
         Massachusetts General Hospital | PI: Dr. Emily Prud'hommeaux
       </p>
       <ul>
-        <li>NSF REU-funded research on Formosan language machine translation</li>
-        <li>Developed synthetic data generation pipelines for low-resource MT</li>
-        <li>Implemented and evaluated multiple neural MT architectures (mBART, NLLB, OpenNMT)</li>
-        <li>First-author publication at ComputEL 2025</li>
+        <li>● NSF REU-funded research on Formosan language machine translation</li>
+        <li>● Developed synthetic data generation pipelines for low-resource MT</li>
+        <li>● Implemented and evaluated multiple neural MT architectures (mBART, NLLB, OpenNMT)</li>
+        <li>● First-author publication at ComputEL 2025</li>
+        <li>● First-author publication at LREC 2026</li>
       </ul>
       
       <p style={{ marginTop: '15px' }}>
@@ -75,9 +84,9 @@ const Research = () => {
         Boston College | PI: Dr. Joshua K. Hartshorne
       </p>
       <ul>
-        <li>Web-based behavioral experiments platform development</li>
-        <li>JavaScript and Selenium testing frameworks</li>
-        <li>Security modernization and OpenSSF compliance</li>
+        <li>● Web-based behavioral experiments platform development</li>
+        <li>● JavaScript and Selenium testing frameworks</li>
+        <li>● Security modernization and OpenSSF compliance</li>
       </ul>
 
       {/* Conference Presentations */}

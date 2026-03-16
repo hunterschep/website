@@ -7,27 +7,24 @@ const Home = () => {
       <h1>Hunter Scheppat</h1>
       
       {/* Bio Section with Photo */}
-      <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px' }}>
+      <div style={{ display: 'flex', alignItems: 'flex-start'}}>
         <img 
-          src={process.env.PUBLIC_URL + '/personal/headshot.jpeg'}
+          src={process.env.PUBLIC_URL + '/personal/headshot.png'}
           alt="Hunter Scheppat"
           className="headshot"
-          style={{ width: '150px', height: 'auto', marginRight: '20px', flexShrink: 0 }}
+          style={{ width: '200px', height: 'auto', marginRight: '20px', marginTop: '15px', flexShrink: 0 }}
         />
         <div>
           <p>
             I am a senior at <a href="https://www.bc.edu/" target="_blank" rel="noopener noreferrer">Boston College</a> pursuing 
             a B.S. in Management and a B.A. in Computer Science. I work as a research assistant at 
-            the <a href="https://ai4commsci.github.io/" target="_blank" rel="noopener noreferrer">AI4 Communication Sciences Lab</a>, where I focus on machine translation for endangered languages.
+            the <a href="https://ai4commsci.github.io/people" target="_blank" rel="noopener noreferrer">AI4 Communication Sciences Lab</a>, where I focus on machine translation for endangered languages.
           </p>
           <p>
             I am very interested in open-source NLP and MT projects. I have previously worked as a resarch assistant at the <a href="https://pushkin-consortium.github.io/pushkin/4.2/" target="_blank" rel="noopener noreferrer">Pushkin Project</a> (2024) and as 
             teaching assistant for CSCI1102: Data Structures (2023).  
-            I serve as the President of the <a href="https://bccss.co/" target="_blank" rel="noopener noreferrer">Boston College Computer Science Society</a>.
-          </p>
-            <p>
-            Post-graduation, I will be joining <a href="https://www2.deloitte.com/" target="_blank" rel="noopener noreferrer">Deloitte</a> as 
-            a Technology Consultant in their Seattle office.
+            I served as the President of the <a href="https://bccss.co/" target="_blank" rel="noopener noreferrer">Boston College Computer Science Society</a> (2024-2026). Post-graduation, I will be joining <a href="https://www2.deloitte.com/" target="_blank" rel="noopener noreferrer">Deloitte</a> as 
+            a consultant in their <a href="https://www2.deloitte.com/insights/cybersecurity" target="_blank" rel="noopener noreferrer">Cyber</a> practice.
           </p>
         </div>
       </div>
@@ -38,11 +35,11 @@ const Home = () => {
         My research focuses on machine translation for low-resource and endangered languages, particularly 
         within the Formosan language family of Taiwan. I am interested in computational methods for language 
         preservation, data augmentation for low-resource NLP, and interactive machine learning systems. 
-        You can find more details on my <a href="/research">research page</a>.
+        You can find more details on my <a href="website/research">research page</a>.
       </p>
       <p>
-        I try to help maintain open-source software and demos on my <a href="/projects">projects page</a>. 
-        I also occasionally write about technology and research on my <a href="/writing">writing page</a>.
+        I try to help maintain open-source software and demos on my <a href="website/projects">projects page</a>. 
+        I also occasionally write about technology and research on my <a href="website/writing">writing page</a>.
       </p>
 
       {/* Contact */}
@@ -72,10 +69,13 @@ const Home = () => {
       <h2>What's New?</h2>
       <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
         <li className="news-item">
+          <span className="news-date">2026-02:</span> Paper accepted to <a href="https://www.elra.info/lrec2026/" target="_blank" rel="noopener noreferrer">LREC 2026</a> (Language Resources and Evaluation Conference).
+        </li>
+        <li className="news-item">
           <span className="news-date">2025-12:</span> Released <a href="https://medium.com/@hunterschep" target="_blank" rel="noopener noreferrer">tutorial on Medium</a> for fine-tuning NLLB-200.
         </li>
         <li className="news-item">
-          <span className="news-date">2025-12:</span> Open source contribution to Hugging Face Transformers library.
+          <span className="news-date">2025-12:</span> Open source <a href="https://github.com/huggingface/transformers/pull/42779" target="_blank" rel="noopener noreferrer">contribution</a> to Hugging Face Transformers library.
         </li>
         <li className="news-item">
           <span className="news-date">2025-05:</span> Featured in <a href="https://x.com/BostonCollege/status/1918386552666787889" target="_blank" rel="noopener noreferrer">Wall Street Journal Future View</a>.
@@ -84,16 +84,16 @@ const Home = () => {
           <span className="news-date">2025-03:</span> Paper at ComputEL 2025 on "Integrating diverse corpora for training an endangered language machine translation system."
         </li>
         <li className="news-item">
-          <span className="news-date">2025-01:</span> Paper accepted to ComputEL 2025 (Workshop on Computational Methods for Endangered Languages).
+          <span className="news-date">2025-01:</span> Paper accepted to <a href='https://computel-workshop.org/computel-8/' target="_blank" rel="noopener noreferrer">ComputEL 2025</a> (Workshop on Computational Methods for Endangered Languages).
         </li>
         <li className="news-item">
-          <span className="news-date">2025-01:</span> Released interactive <a href="https://huggingface.co/spaces/hunterschep/ami-zh-translation" target="_blank" rel="noopener noreferrer">Formosan-Mandarin translation demo</a> on Hugging Face.
+          <span className="news-date">2025-01:</span> Released interactive <a href="https://huggingface.co/FormosanBankDemos" target="_blank" rel="noopener noreferrer">Formosan MT and ASR demos</a> on Hugging Face.
         </li>
       </ul>
 
       {/* Footer */}
       <div className="footer">
-        All content © Hunter Scheppat. Last updated: December 2025.
+        All content © Hunter Scheppat. Last updated: March 2026.
       </div>
     </div>
   );
