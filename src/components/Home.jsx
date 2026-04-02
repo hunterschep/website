@@ -23,8 +23,7 @@ const Home = () => {
           <p>
             I am very interested in open-source NLP and MT projects. I have previously worked as a resarch assistant at the <a href="https://pushkin-consortium.github.io/pushkin/4.2/" target="_blank" rel="noopener noreferrer">Pushkin Project</a> (2024) and as 
             teaching assistant for CSCI1102: Data Structures (2023).  
-            I served as the President of the <a href="https://bccss.co/" target="_blank" rel="noopener noreferrer">Boston College Computer Science Society</a> (2024-2026). Post-graduation, I will be joining <a href="https://www2.deloitte.com/" target="_blank" rel="noopener noreferrer">Deloitte</a> as 
-            a consultant in their <a href="https://www2.deloitte.com/insights/cybersecurity" target="_blank" rel="noopener noreferrer">Cyber</a> practice.
+            I served as the President of the <a href="https://bccss.co/" target="_blank" rel="noopener noreferrer">Boston College Computer Science Society</a> (2024-2026). 
           </p>
         </div>
       </div>
