@@ -16,7 +16,7 @@ const Home = () => {
         />
         <div>
           <p>
-            I am a senior at <a href="https://www.bc.edu/" target="_blank" rel="noopener noreferrer">Boston College</a> pursuing 
+            I graduated cum laude from <a href="https://www.bc.edu/" target="_blank" rel="noopener noreferrer">Boston College</a> in May 2026 with 
             a B.S. in Management and a B.A. in Computer Science. I work as a research assistant at 
             the <a href="https://ai4commsci.github.io/people" target="_blank" rel="noopener noreferrer">AI4 Communication Sciences Lab</a>, where I focus on machine translation for endangered languages.
           </p>

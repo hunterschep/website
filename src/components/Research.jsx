@@ -37,11 +37,14 @@ const Research = () => {
       <h2>Publications</h2>
 
       <div className="publication">
-        <strong>Coming Soon:</strong><br />
-        FormosanMT: A Multilingual Parallel Corpus of the Formosan Language Family<br />
-        <span style={{ color: '#888' }}>
-          Accepted at LREC 2026. Publication pending.
-        </span>
+        <strong>Hunter Scheppat</strong>, Joshua K. Hartshorne, Sercan Koc, Éric Le Ferrand, and Emily Prud'hommeaux. 2026. 
+        FormosanMT: A Multilingual Parallel Corpus of the Formosan Language Family. 
+        In <em>Proceedings of the Fifteenth Language Resources and Evaluation Conference (LREC 2026)</em>, pages 3445-3455. 
+        European Language Resources Association (ELRA).
+        <div className="pub-links">
+          [<a href="https://doi.org/10.63317/3ut33xim33nt" target="_blank" rel="noopener noreferrer">DOI</a>]
+          [<a href="https://lrec.elra.info/lrec2026-main-273" target="_blank" rel="noopener noreferrer">LREC</a>]
+        </div>
       </div>
       
       <div className="publication">
