@@ -68,6 +68,12 @@ const Home = () => {
       <h2>What's New?</h2>
       <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
         <li className="news-item">
+          <span className="news-date">2026-05:</span> Graduated Cum Laude from Boston College.
+        </li>
+        <li className="news-item">
+          <span className="news-date">2026-05:</span> Paper at LREC 2026 on "FormosanMT: A Multilingual Parallel Corpus of the Formosan Language Family."
+        </li>
+        <li className="news-item">
           <span className="news-date">2026-02:</span> Paper accepted to <a href="https://www.elra.info/lrec2026/" target="_blank" rel="noopener noreferrer">LREC 2026</a> (Language Resources and Evaluation Conference).
         </li>
         <li className="news-item">

@@ -56,10 +56,7 @@ const Research = () => {
         to Taiwan. Together the corpora total nearly 500,000 Formosan-Mandarin and Formosan-English sentence pairs. We share scripts for 
         extracting these corpora from public sources, along with customizable tools for filtering, normalizing, and partitioning the data. 
         In addition, we provide a new tokenizer for Traditional Chinese writing compatible with the popular No Language Left Behind (NLLB) 
-        MT architecture, along with updated and improved code for fine-tuning NLLB for any low-resource language pair. Finally, we distribute 
-        our fully trained NLLB and OpenNMT models for the Formosan languages to and from both Mandarin and English. In addition to serving as 
-        a valuable resource for the Formosan language speaker communities, our data, code, and models will be available to NLP researchers 
-        working on endangered and low-resource language MT.
+        MT architecture, along with updated and improved code for fine-tuning NLLB for any low-resource language pair.
       </blockquote>
       
       <div className="publication">
@@ -84,10 +81,17 @@ const Research = () => {
 
       {/* Research Experience */}
       <h2>Research Experience</h2>
-      
       <p>
+        <strong>Post-Graduate Research Assistant</strong>, AI4 Communication Sciences Lab (2026-Present)<br />
+        MGH / BC / NSF | PI: Dr. Emily Prud'hommeaux
+      </p>
+      <ul>
+        <li>● Focusing on High Performance Computing, MT, and ASR</li>
+      </ul>
+      
+      <p style={{ marginTop: '15px' }}>
         <strong>Research Assistant</strong>, AI4 Communication Sciences Lab (2023-Present)<br />
-        Massachusetts General Hospital | PI: Dr. Emily Prud'hommeaux
+        MGH / BC / NSF | PI: Dr. Emily Prud'hommeaux
       </p>
       <ul>
         <li>● NSF REU-funded research on Formosan language machine translation</li>
