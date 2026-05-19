@@ -9,7 +9,7 @@ const Home = () => {
       {/* Bio Section with Photo */}
       <div style={{ display: 'flex', alignItems: 'flex-start'}}>
         <img 
-          src={process.env.PUBLIC_URL + '/personal/headshot.png'}
+          src={`${import.meta.env.BASE_URL}personal/headshot.png`}
           alt="Hunter Scheppat"
           className="headshot"
           style={{ width: '200px', height: 'auto', marginRight: '20px', marginTop: '15px', flexShrink: 0 }}
