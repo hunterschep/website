@@ -86,7 +86,7 @@ const Home = () => {
           <span className="news-date">2025-01:</span> Paper accepted to <a href='https://computel-workshop.org/computel-8/' target="_blank" rel="noopener noreferrer">ComputEL 2025</a> (Workshop on Computational Methods for Endangered Languages).
         </li>
         <li className="news-item">
-          <span className="news-date">2025-01:</span> Released interactive <a href="https://huggingface.co/FormosanBankDemos" target="_blank" rel="noopener noreferrer">Formosan MT and ASR demos</a> on Hugging Face.
+          <span className="news-date">2025-01:</span> Released interactive <a href="https://huggingface.co/FormosanBank" target="_blank" rel="noopener noreferrer">Formosan MT and ASR demos</a> on Hugging Face.
         </li>
       </ul>
 
