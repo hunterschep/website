@@ -46,6 +46,21 @@ const Research = () => {
           [<a href="https://lrec.elra.info/lrec2026-main-273" target="_blank" rel="noopener noreferrer">LREC</a>]
         </div>
       </div>
+
+      <blockquote>
+        <strong>Abstract:</strong> While the quality of machine translation (MT) between widely-spoken languages has improved dramatically 
+        in recent years, training robust MT systems for languages with fewer resources remains a challenge. Endangered languages, which 
+        often lack the speaker population and written tradition needed to create text resources, are at a particular disadvantage. 
+        Developing robust MT architectures for very low-resource settings is hampered by the lack of suitable parallel corpora. To address 
+        this challenge, we introduce FormosanMT, a set of MT-ready parallel corpora for the Formosan family of endangered languages indigenous 
+        to Taiwan. Together the corpora total nearly 500,000 Formosan-Mandarin and Formosan-English sentence pairs. We share scripts for 
+        extracting these corpora from public sources, along with customizable tools for filtering, normalizing, and partitioning the data. 
+        In addition, we provide a new tokenizer for Traditional Chinese writing compatible with the popular No Language Left Behind (NLLB) 
+        MT architecture, along with updated and improved code for fine-tuning NLLB for any low-resource language pair. Finally, we distribute 
+        our fully trained NLLB and OpenNMT models for the Formosan languages to and from both Mandarin and English. In addition to serving as 
+        a valuable resource for the Formosan language speaker communities, our data, code, and models will be available to NLP researchers 
+        working on endangered and low-resource language MT.
+      </blockquote>
       
       <div className="publication">
         <strong>Hunter Scheppat</strong>, Joshua Hartshorne, Dylan Leddy, Éric Le Ferrand, and Emily Prud'hommeaux. 2025. 
