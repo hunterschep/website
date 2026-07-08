@@ -26,6 +26,28 @@ const Projects = () => {
 
       <div className="project-item">
         <div className="project-title">
+          FormosanMT
+        </div>
+        <div className="project-tech">
+          Python, Rust, PyPi, Shell
+        </div>
+        <p>
+          TAME-MT is a command-line tool and Python package for evaluating machine translation 
+          systems while accounting for the data they were trained on.
+        </p>
+        <p>
+          <a
+            href="https://pypi.org/project/tame-mt/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            PyPi package
+          </a>
+        </p>
+      </div>
+
+      <div className="project-item">
+        <div className="project-title">
           Canvas LMS Codex Plugin
         </div>
         <div className="project-tech">

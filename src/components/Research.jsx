@@ -43,21 +43,10 @@ const Research = () => {
         European Language Resources Association (ELRA).
         <div className="pub-links">
           [<a href="https://doi.org/10.63317/3ut33xim33nt" target="_blank" rel="noopener noreferrer">DOI</a>]
+          [<a href="https://f003.backblazeb2.com/file/lrec-media/lrec2026/videos/1488.mp4" target="_blank" rel="noopener noreferrer">Talk</a>]
           [<a href="https://lrec.elra.info/lrec2026-main-273" target="_blank" rel="noopener noreferrer">LREC</a>]
         </div>
       </div>
-
-      <blockquote>
-        <strong>Abstract:</strong> While the quality of machine translation (MT) between widely-spoken languages has improved dramatically 
-        in recent years, training robust MT systems for languages with fewer resources remains a challenge. Endangered languages, which 
-        often lack the speaker population and written tradition needed to create text resources, are at a particular disadvantage. 
-        Developing robust MT architectures for very low-resource settings is hampered by the lack of suitable parallel corpora. To address 
-        this challenge, we introduce FormosanMT, a set of MT-ready parallel corpora for the Formosan family of endangered languages indigenous 
-        to Taiwan. Together the corpora total nearly 500,000 Formosan-Mandarin and Formosan-English sentence pairs. We share scripts for 
-        extracting these corpora from public sources, along with customizable tools for filtering, normalizing, and partitioning the data. 
-        In addition, we provide a new tokenizer for Traditional Chinese writing compatible with the popular No Language Left Behind (NLLB) 
-        MT architecture, along with updated and improved code for fine-tuning NLLB for any low-resource language pair.
-      </blockquote>
       
       <div className="publication">
         <strong>Hunter Scheppat</strong>, Joshua Hartshorne, Dylan Leddy, Éric Le Ferrand, and Emily Prud'hommeaux. 2025. 
@@ -69,15 +58,7 @@ const Research = () => {
           [<a href="https://huggingface.co/spaces/hunterschep/ami-zh-translation" target="_blank" rel="noopener noreferrer">Demo</a>]
         </div>
       </div>
-      
-      <blockquote>
-        <strong>Abstract:</strong> Machine translation (MT) can support endangered language documentation and usage, 
-        but most lack sufficient parallel corpora for training effective models. This study repurposes diverse 
-        data sources to train MT systems for Amis, an Indigenous language of Taiwan, and supplements limited 
-        Amis-English data by generating synthetic translations from an Amis-Mandarin corpus. Results show that 
-        synthetic data improves translation to English but not from English, and no single MT system consistently 
-        outperforms the other, emphasizing the need to experiment with multiple training approaches for optimal performance.
-      </blockquote>
+    
 
       {/* Research Experience */}
       <h2>Research Experience</h2>
@@ -113,6 +94,11 @@ const Research = () => {
 
       {/* Conference Presentations */}
       <h2>Presentations</h2>
+      <ul>
+        <li>
+          <strong>LREC 2026</strong> (May 2026): "FormosanMT: A Multilingual Parallel Corpus of the Formosan Language Family" - Oral presentation at the 15th Language Resources and Evaluation Conference.
+        </li>
+      </ul>
       <ul>
         <li>
           <strong>ComputEL-8</strong> (March 2025): "Integrating diverse corpora for training an endangered language machine translation system" - Oral presentation at the 8th Workshop on Computational Methods for Endangered Languages.
