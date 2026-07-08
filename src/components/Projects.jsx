@@ -26,7 +26,7 @@ const Projects = () => {
 
       <div className="project-item">
         <div className="project-title">
-          FormosanMT
+          TAME-MT
         </div>
         <div className="project-tech">
           Python, Rust, PyPi, Shell
