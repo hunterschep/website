@@ -3,12 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://hunterschep.github.io/website",
-  "dependencies": {
-    "daisyui": "^4.12.22",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.5"
-  },
   "scripts": {
     "start": "vite",
     "build": "vite build",
@@ -16,24 +10,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
-    "@vitejs/plugin-react": "^5.0.0",
-    "autoprefixer": "^10.4.20",
     "gh-pages": "^6.3.0",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.16",
     "vite": "^7.0.0"
   }
 }

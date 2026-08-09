@@ -1,47 +1,85 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/website/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Hunter Scheppat's personal website"
-    />
-    <link rel="apple-touch-icon" href="/website/favicon.ico" />
-    <link rel="manifest" href="/website/manifest.json" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hunter Scheppat, computer scientist and machine translation researcher.">
+    <meta name="author" content="Hunter Scheppat">
+    <meta name="theme-color" content="#8a100b">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="/style.css">
     <title>Hunter Scheppat</title>
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        background-color: #000000;
-        overflow-x: hidden;
-        width: 100%;
-        height: 100%;
-      }
-      #root {
-        min-height: 100vh;
-        background-color: #000000;
-      }
-    </style>
-    <script type="text/javascript">
-      (function(l) {
-        if (l.search[1] === '/') {
-          var decoded = l.search.slice(1).split('&').map(function(s) {
-            return s.replace(/~and~/g, '&');
-          }).join('?');
-          window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      }(window.location));
-    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div id="page">
+      <header class="site-header">
+        <p class="eyebrow">Hunter Scheppat&rsquo;s home page</p>
+        <div class="identity">
+          <div>
+            <h1>Hunter Scheppat</h1>
+            <p class="subtitle">Machine translation researcher &amp; software developer</p>
+          </div>
+          <p class="affiliation">AI4 Communication Sciences Lab<br>Boston College</p>
+        </div>
+        <nav aria-label="Main navigation">
+          <strong>Home</strong>
+          <a href="research/">Research</a>
+          <a href="software/">Software</a>
+          <a href="writing/">Writing</a>
+          <a href="https://drive.google.com/file/d/1Lkt3DRC1ncp7lVdHrS4-wtcaEkj0N5YL/view?usp=sharing">Curriculum vitae</a>
+        </nav>
+      </header>
+
+      <main>
+        <p class="breadcrumb">You are here: <strong>Home</strong></p>
+
+        <section class="intro" aria-labelledby="about-heading">
+          <h2 id="about-heading">About me</h2>
+          <div class="portrait">
+            <img src="personal/headshot.png" alt="Portrait of Hunter Scheppat" width="210" height="170">
+            <p>Hunter Scheppat, 2026</p>
+          </div>
+          <p>I graduated <em>cum laude</em> from <a href="https://www.bc.edu/">Boston College</a> in May 2026 with a B.S. in Management and a B.A. in Computer Science. I work as a research assistant at the <a href="https://ai4commsci.github.io/people">AI4 Communication Sciences Lab</a>, where I study machine translation for endangered languages.</p>
+          <p>My interests include open-source natural language processing, low-resource machine translation, data augmentation, and interactive machine learning. Previously, I worked on the <a href="https://pushkin-consortium.github.io/pushkin/4.2/">Pushkin Project</a>, taught Data Structures, and served as president of the <a href="https://bccss.co/">Boston College Computer Science Society</a>.</p>
+          <p>Most of my current work concerns the Formosan languages of Taiwan. See the <a href="research/">research page</a> for papers and talks, or the <a href="software/">software page</a> for tools and repositories.</p>
+        </section>
+
+        <section aria-labelledby="news-heading">
+          <h2 id="news-heading">News &amp; notes</h2>
+          <dl class="news-list">
+            <div><dt>2026-05</dt><dd>Graduated <em>cum laude</em> from Boston College.</dd></div>
+            <div><dt>2026-05</dt><dd>Presented <cite>FormosanMT: A Multilingual Parallel Corpus of the Formosan Language Family</cite> at LREC 2026.</dd></div>
+            <div><dt>2026-02</dt><dd>Paper accepted to <a href="https://www.elra.info/lrec2026/">LREC 2026</a>.</dd></div>
+            <div><dt>2025-12</dt><dd>Published a <a href="https://medium.com/@hunterschep">tutorial on fine-tuning NLLB-200</a>.</dd></div>
+            <div><dt>2025-12</dt><dd>Contributed to the <a href="https://github.com/huggingface/transformers/pull/42779">Hugging Face Transformers</a> library.</dd></div>
+            <div><dt>2025-05</dt><dd>Featured in the <a href="https://x.com/BostonCollege/status/1918386552666787889">Wall Street Journal Future View</a>.</dd></div>
+            <div><dt>2025-03</dt><dd>Presented research on endangered-language MT at ComputEL 2025.</dd></div>
+          </dl>
+        </section>
+
+        <section aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Contact &amp; links</h2>
+          <div class="contact-grid">
+            <address>
+              <strong>Hunter Scheppat</strong><br>
+              AI4 Communication Sciences Lab<br>
+              Boston College<br>
+              <a href="mailto:hunter.scheppat@bc.edu">hunter.scheppat@bc.edu</a>
+            </address>
+            <ul class="link-list">
+              <li><a href="https://github.com/hunterschep">GitHub</a></li>
+              <li><a href="https://scholar.google.com/citations?user=MsjRFU8AAAAJ&amp;hl=en">Google Scholar</a></li>
+              <li><a href="https://www.linkedin.com/in/hunterscheppat/">LinkedIn</a></li>
+              <li><a href="https://huggingface.co/hunterschep">Hugging Face</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>Last revised: 9 August 2026 &middot; <a href="mailto:hunter.scheppat@bc.edu">Corrections</a></p>
+        <p>Copyright &copy; Hunter Scheppat. This site is hand-written HTML and CSS.</p>
+      </footer>
+    </div>
   </body>
 </html>

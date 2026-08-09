@@ -1,3 +1,10 @@
-# Hunter Scheppat - Personal Website 
+# Hunter Scheppat&rsquo;s personal website
 
-A simple retro themed React website for my academic pursuits and other interests
+A static academic website built with hand-written HTML and CSS. Vite provides the local development server and multi-page production build.
+
+```sh
+npm install
+npm start
+```
+
+Production files are generated with `npm run build`.
