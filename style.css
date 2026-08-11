@@ -19,6 +19,8 @@ html {
   min-width: 320px;
   min-height: 100%;
   background: var(--field);
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -76,7 +78,7 @@ a:focus-visible {
   align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
-  padding: 22px 24px 18px;
+  padding: 16px 24px 13px;
   background: #f7f3e9;
   border-bottom: 1px solid #b7a989;
 }
@@ -133,7 +135,7 @@ nav strong:first-child {
 nav strong {
   color: #fff;
   background: var(--maroon);
-  font-weight: bold;
+  font-weight: normal;
 }
 
 nav a:visited {
