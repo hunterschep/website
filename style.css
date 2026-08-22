@@ -267,6 +267,17 @@ address {
   counter-reset: papers 3;
 }
 
+.publication-heading {
+  margin: 16px 0 9px;
+  padding-bottom: 3px;
+  border-bottom: 1px dotted var(--rule);
+  font-size: 15px;
+}
+
+.coauthored-bibliography {
+  counter-reset: papers 2;
+}
+
 .bibliography li {
   position: relative;
   margin: 0 0 20px;
