@@ -1,0 +1,8 @@
+{% assign paper = include.item %}
+<article class="publication-record{% if include.compact %} publication-record--compact{% endif %}">
+  <p class="record-meta"><span class="venue-label">{{ paper.venue_short }}</span> {{ paper.year }}{% if include.compact and paper.category == 'first_author' %} · first author{% endif %}{% if paper.status %} · {{ paper.status }}{% endif %}</p>
+  <h3><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
+  {% unless include.compact %}<p class="citation">{{ paper.citation }}</p>{% endunless %}
+  <p>{{ paper.excerpt }}</p>
+  {% include resource-links.html links=paper.resources %}
+</article>

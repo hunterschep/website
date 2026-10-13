@@ -1,0 +1,17 @@
+<div class="author-profile" itemscope itemtype="https://schema.org/Person">
+  <div class="author__avatar">
+    <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="Portrait of Hunter Scheppat" width="210" height="170" fetchpriority="high" itemprop="image">
+  </div>
+  <div class="author__content">
+    <h2 class="author__name" itemprop="name">{{ site.author.name }}</h2>
+    <p class="author__bio">{{ site.author.bio }}</p>
+    <p class="author__education">{{ site.author.education }}</p>
+  </div>
+  <ul class="author__links" aria-label="Contact and profiles">
+    <li><a href="mailto:{{ site.author.email }}" itemprop="email">Email</a></li>
+    <li><a href="{{ site.author.googlescholar | escape }}">Google Scholar</a></li>
+    <li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/">LinkedIn</a></li>
+    <li><a href="https://huggingface.co/{{ site.author.huggingface }}">Hugging Face</a></li>
+  </ul>
+</div>

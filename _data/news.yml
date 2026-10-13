@@ -1,0 +1,16 @@
+- date: "2026-08"
+  text: 'Our paper <a href="/publications/a-family-affair/">A Family Affair</a> was accepted to the EMNLP 2026 Main Conference. Endangered languages, ASR, and some counterintuitive transfer effects.'
+- date: "2026-05"
+  text: 'Graduated <em>cum laude</em> from Boston College. B.S. in Management, B.A. in Computer Science.'
+- date: "2026-05"
+  text: 'Presented <a href="/publications/formosanmt/">FormosanMT</a> at LREC 2026.'
+- date: "2026-02"
+  text: 'FormosanMT accepted to <a href="https://www.elra.info/lrec2026/">LREC 2026</a>.'
+- date: "2025-12"
+  text: 'Published a <a href="https://medium.com/@hunterschep">tutorial on fine-tuning NLLB-200</a> for low-resource languages.'
+- date: "2025-12"
+  text: 'Contributed to <a href="https://github.com/huggingface/transformers/pull/42779">Hugging Face Transformers</a>.'
+- date: "2025-05"
+  text: 'Featured in the <a href="https://x.com/BostonCollege/status/1918386552666787889">Wall Street Journal Future View</a>.'
+- date: "2025-03"
+  text: 'Presented our work on endangered-language machine translation at ComputEL-8.'

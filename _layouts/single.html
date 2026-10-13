@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<div id="main" role="main" tabindex="-1">
+  {% include sidebar.html %}
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="{{ page.title | escape }}">
+    {% if page.description or page.excerpt %}<meta itemprop="description" content="{{ page.description | default: page.excerpt | strip_html | escape }}">{% endif %}
+    <div class="page__inner-wrap">
+      <header>
+        <h1 class="page__title" itemprop="headline">{{ page.title }}</h1>
+        {% if page.collection == 'publications' %}
+          <p class="record-meta">{{ page.venue }} · {{ page.year }}{% if page.status %} · {{ page.status }}{% endif %}</p>
+        {% elsif page.collection == 'talks' %}
+          <p class="record-meta">{{ page.venue }} · {{ page.month }} {{ page.year }} · {{ page.talk_type }}</p>
+        {% elsif page.collection == 'portfolio' %}
+          <p class="record-meta">{{ page.stack }}</p>
+        {% endif %}
+      </header>
+      <section class="page__content" itemprop="text">
+        {{ content }}
+        {% include resource-links.html links=page.resources %}
+        {% if page.citation %}
+          <h2>Citation</h2>
+          <p class="citation">{{ page.citation }}</p>
+        {% endif %}
+        {% if page.collection == 'publications' or page.collection == 'talks' %}
+          <p class="section-link"><a href="{{ '/research/' | relative_url }}">← Back to research</a></p>
+        {% elsif page.collection == 'portfolio' %}
+          <p class="section-link"><a href="{{ '/software/' | relative_url }}">← Back to software</a></p>
+        {% endif %}
+      </section>
+    </div>
+  </article>
+</div>
