@@ -32,6 +32,8 @@ Copy a similar collection entry when adding a paper, talk, or project. Front mat
 
 The CV currently links to the existing Google Drive document. Writing links to external posts. Neither needs a second copy here.
 
+The migration link audit replaced the retired lab people page with its homepage and the expired `bccss.co` domain with `bccss.dev`. The original photography portfolio is offline and the Amis demo requires access; their URLs are retained and their availability is marked on the site.
+
 ## Build & deploy
 
 ```sh

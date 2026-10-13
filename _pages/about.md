@@ -6,11 +6,11 @@ description: "Hunter Scheppat: NLP researcher, software builder, and Associate S
 
 <p class="eyebrow">Language technology / useful software / other things</p>
 
-I work on machine translation for endangered languages and build software around the research. Most of that work concerns the **Formosan languages of Taiwan**, with the [AI4 Communication Sciences Lab](https://ai4commsci.github.io/people) and Dr. Emily Prud’hommeaux.
+I work on machine translation for endangered languages and build software around the research. Most of that work concerns the **Formosan languages of Taiwan**, with the [AI4 Communication Sciences Lab](https://ai4commsci.github.io/) and Dr. Emily Prud’hommeaux.
 
 I’m also an **Associate Solutions Architect at [Amazon Web Services](https://aws.amazon.com/)**. I like working across the whole problem: the data, the models, the tools, and getting something useful into people’s hands.
 
-I graduated *cum laude* from [Boston College](https://www.bc.edu/) in May 2026 with a B.A. in Computer Science and a B.S. in Management. Along the way, I worked on the [Pushkin Project](https://pushkin-consortium.github.io/pushkin/4.2/), taught Data Structures, and served as president of the [Computer Science Society](https://bccss.co/).
+I graduated *cum laude* from [Boston College](https://www.bc.edu/) in May 2026 with a B.A. in Computer Science and a B.S. in Management. Along the way, I worked on the [Pushkin Project](https://pushkin-consortium.github.io/pushkin/4.2/), taught Data Structures, and served as president of the [Computer Science Society](https://bccss.dev/).
 
 ## A couple of papers
 

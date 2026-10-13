@@ -49,4 +49,4 @@ That means a mix of corpus work, synthetic data pipelines, model training, and e
 
 ## Teaching & community
 
-I taught **Data Structures** and served as president of the [Boston College Computer Science Society](https://bccss.co/). I enjoy making the technical parts easier to get into, whether that means a class, a tutorial, or a tool someone can actually use.
+I taught **Data Structures** and served as president of the [Boston College Computer Science Society](https://bccss.dev/). I enjoy making the technical parts easier to get into, whether that means a class, a tutorial, or a tool someone can actually use.

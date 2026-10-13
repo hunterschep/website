@@ -19,7 +19,7 @@ I occasionally write about machine learning, NLP, and whatever else I’ve been 
 
 - **[Medium](https://medium.com/@hunterschep)**: tutorials and short essays on machine learning, NLP, and technology.
 - **[Substack](https://substack.com/@hunterscheppat)**: longer essays and occasional updates.
-- **[Photography](https://hunterscheppat.myportfolio.com/)**: a few things seen away from a screen.
+- **[Photography](https://hunterscheppat.myportfolio.com/)**: a few things seen away from a screen. The portfolio is offline at the moment.
 - **[Hugging Face](https://huggingface.co/hunterschep)**: models, datasets, and demos.
 
 ## Something personal
