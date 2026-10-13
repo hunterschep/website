@@ -2,6 +2,10 @@
 
 Move this site to [Academic Pages](https://academicpages.github.io/) in the existing repository. Keep the compact, early-web personality while giving publications, research, and software a clearer academic presentation.
 
+**Completed 12 October 2026.** [PR #1](https://github.com/hunterschep/website/pull/1) is merged and the site is live at the original URL. The [production build and deployment](https://github.com/hunterschep/website/actions/runs/38358309863) passed. All 15 live pages match the local build; the stylesheet, portrait, and favicon also match. Desktop/mobile previews, internal links, metadata, content counts, and the custom 404 passed. The original site is preserved in the `pre-academic-pages-20261012` tag and old `gh-pages` deployment branch.
+
+The link audit updated the retired lab people URL and expired club domain to verified replacements. The original photography portfolio is offline and the Amis demo is restricted; both URLs are retained with availability notes. The FormosanMT author name was corrected to Sema Koc against the published PDF.
+
 Estimated effort: **4–8 focused hours**, including content conversion, light customization, and deployment checks. This is a small static-site migration; Ruby dependency setup and visual refinement are the main uncertainties.
 
 ## Current scope
