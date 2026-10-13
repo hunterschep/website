@@ -1,0 +1,7 @@
+{% if include.links.size > 0 %}
+<p class="resource-links">
+{% for link in include.links %}
+  <a href="{{ link.url | escape }}">{{ link.label }}</a>{% unless forloop.last %}<span aria-hidden="true"> · </span>{% endunless %}
+{% endfor %}
+</p>
+{% endif %}

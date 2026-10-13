@@ -1,0 +1,11 @@
+main:
+  - title: Home
+    url: /
+  - title: Research
+    url: /research/
+  - title: Software
+    url: /software/
+  - title: Writing
+    url: /writing/
+  - title: CV
+    url: https://drive.google.com/file/d/1XUhIaElvgU7arwn5pZexog_bZavbaLIY/view?usp=sharing
