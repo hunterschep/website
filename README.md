@@ -21,6 +21,7 @@ Open `http://localhost:4000/website/`.
 - `_data/`: navigation and news.
 - `_config.yml`: profile and site settings.
 - `assets/css/main.css`: all styling.
+- `assets/js/flow-field.js`: the cursor-responsive background. It pauses in hidden tabs and respects reduced motion and data-saving preferences.
 
 Copy a similar record to add content. Publications sort by descending `order`; projects sort ascending. `featured: true` includes a record on Home.
 
