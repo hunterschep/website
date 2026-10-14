@@ -7,6 +7,6 @@
     {% include masthead.html %}
     {{ content }}
     <footer class="site-footer">{% include footer.html %}</footer>
-    <script src="{{ '/assets/js/flow-field.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/flow-field.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   </body>
 </html>
