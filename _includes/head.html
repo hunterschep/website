@@ -1,16 +1,19 @@
-{% include base_path %}
-
+{% assign description = page.description | default: page.excerpt | default: site.description | strip_html %}
+{% assign canonical = page.url | replace: 'index.html', '' | absolute_url %}
 <meta charset="utf-8">
-
-{% include seo.html %}
-
-<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
-<!-- For all browsers -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.url != '/' %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+<meta name="description" content="{{ description | escape }}">
+<meta name="author" content="{{ site.name | escape }}">
+<meta name="theme-color" content="#8a100b">
+<link rel="canonical" href="{{ canonical }}">
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ description | escape }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ '/images/headshot.png' | absolute_url }}">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":{{ site.name | jsonify }},"url":{{ '/' | absolute_url | jsonify }},"sameAs":{{ site.social.links | jsonify }}}
+</script>

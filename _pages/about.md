@@ -1,49 +1,38 @@
 ---
-title: "Hi, I’m Hunter."
+title: About
 permalink: /
-description: "Hunter Scheppat: NLP researcher, software builder, and Associate Solutions Architect at AWS. Research on machine translation for endangered languages."
+description: "Hunter Scheppat. Associate Solutions Architect at AWS and researcher in endangered-language machine translation."
 ---
 
-<p class="eyebrow">Language technology / useful software / other things</p>
+I’m an Associate Solutions Architect at [Amazon Web Services](https://aws.amazon.com/) and a researcher working on machine translation for endangered languages. My research focuses on the Formosan languages of Taiwan with Dr. Emily Prud’hommeaux and the [AI4 Communication Sciences Lab](https://ai4commsci.github.io/).
 
-I work on machine translation for endangered languages and build software around the research. Most of that work concerns the **Formosan languages of Taiwan**, with the [AI4 Communication Sciences Lab](https://ai4commsci.github.io/) and Dr. Emily Prud’hommeaux.
+I graduated *cum laude* from [Boston College](https://www.bc.edu/) in 2026 with a B.A. in Computer Science and a B.S. in Management. Previously: [Pushkin Project](https://pushkin-consortium.github.io/pushkin/4.2/), Data Structures teaching, and president of the [Computer Science Society](https://bccss.dev/).
 
-I’m also an **Associate Solutions Architect at [Amazon Web Services](https://aws.amazon.com/)**. I like working across the whole problem: the data, the models, the tools, and getting something useful into people’s hands.
-
-I graduated *cum laude* from [Boston College](https://www.bc.edu/) in May 2026 with a B.A. in Computer Science and a B.S. in Management. Along the way, I worked on the [Pushkin Project](https://pushkin-consortium.github.io/pushkin/4.2/), taught Data Structures, and served as president of the [Computer Science Society](https://bccss.dev/).
-
-## A couple of papers
+## Selected publications
 
 {% assign papers = site.publications | where: "featured", true | sort: "order" | reverse %}
 {% for paper in papers %}
 {% include publication.html item=paper compact=true %}
 {% endfor %}
 
-<p class="section-link"><a href="{{ '/research/' | relative_url }}">All publications, talks, and research experience →</a></p>
+<p class="section-link"><a href="{{ '/research/' | relative_url }}">All publications and talks</a></p>
 
-## Things I’ve built
+## Software
 
 {% assign projects = site.portfolio | where: "featured", true | sort: "order" %}
 <ul class="selected-software">
 {% for project in projects %}
-  <li><a href="{{ project.url | relative_url }}"><strong>{{ project.title }}</strong></a>. {{ project.excerpt }}</li>
+  <li><a href="{{ project.url | relative_url }}">{{ project.title }}</a>. {{ project.excerpt }}</li>
 {% endfor %}
 </ul>
 
-<p class="section-link"><a href="{{ '/software/' | relative_url }}">More software, including a few side quests →</a></p>
+<p class="section-link"><a href="{{ '/software/' | relative_url }}">More projects</a></p>
 
-## News & notes
+## News
 
 <dl class="news-list">
 {% assign internal_link_prefix = 'href="' | append: site.baseurl | append: '/' %}
 {% for item in site.data.news %}
-  <div>
-    <dt><time datetime="{{ item.date }}">{{ item.date }}</time></dt>
-    <dd>{{ item.text | replace: 'href="/', internal_link_prefix }}</dd>
-  </div>
+  <div><dt><time datetime="{{ item.date }}">{{ item.date }}</time></dt><dd>{{ item.text | replace: 'href="/', internal_link_prefix }}</dd></div>
 {% endfor %}
 </dl>
-
-## Say hello
-
-Email is easiest: [hunterschep@gmail.com](mailto:hunterschep@gmail.com). You can also find me on [GitHub](https://github.com/hunterschep), [Google Scholar](https://scholar.google.com/citations?user=MsjRFU8AAAAJ&hl=en), [LinkedIn](https://www.linkedin.com/in/hunterscheppat/), and [Hugging Face](https://huggingface.co/hunterschep).

@@ -19,6 +19,4 @@ resources:
     url: https://huggingface.co/spaces/hunterschep/ami-zh-translation
 ---
 
-We repurpose diverse Amis, English, and Mandarin sources as parallel data for Amis machine translation, and use Mandarin-to-English translation to supplement the limited Amis–English corpus.
-
-We compare OpenNMT and NLLB across translation directions. Synthetic data helps when translating into English, but the effects vary by direction, architecture, and data size. The results make a case for testing multiple training approaches when working with an under-resourced language.
+Amis–English and Amis–Mandarin translation using diverse corpora, synthetic English data, OpenNMT, and NLLB. Synthetic data helps when translating into English; effects vary by direction and model.

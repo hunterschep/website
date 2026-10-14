@@ -1,7 +1,6 @@
 <header class="masthead">
   <div class="masthead__inner-wrap">
     <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <p class="site-tagline">A small corner of the internet.</p>
     <nav class="masthead__menu" aria-label="Main navigation">
       <ul>
       {% for link in site.data.navigation.main %}
@@ -9,7 +8,7 @@
         {% if page.url == link.url %}{% assign active = true %}{% endif %}
         {% if link.url == '/research/' and page.collection == 'publications' or link.url == '/research/' and page.collection == 'talks' %}{% assign active = true %}{% endif %}
         {% if link.url == '/software/' and page.collection == 'portfolio' %}{% assign active = true %}{% endif %}
-        <li><a href="{% if link.url contains '://' %}{{ link.url | escape }}{% else %}{{ link.url | relative_url }}{% endif %}"{% if active %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+        <li><a href="{% if link.url contains '://' %}{{ link.url | escape }}{% else %}{{ link.url | relative_url }}{% endif %}"{% if active %} aria-current="{% if page.url == link.url %}page{% else %}location{% endif %}"{% endif %}>{{ link.title }}</a></li>
       {% endfor %}
       </ul>
     </nav>

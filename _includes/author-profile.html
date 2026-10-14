@@ -1,11 +1,10 @@
 <div class="author-profile" itemscope itemtype="https://schema.org/Person">
   <div class="author__avatar">
-    <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="Portrait of Hunter Scheppat" width="210" height="170" fetchpriority="high" itemprop="image">
+    <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="Portrait of Hunter Scheppat" width="180" height="146" fetchpriority="high" itemprop="image">
   </div>
   <div class="author__content">
-    <h2 class="author__name" itemprop="name">{{ site.author.name }}</h2>
+    <meta itemprop="name" content="{{ site.author.name }}">
     <p class="author__bio">{{ site.author.bio }}</p>
-    <p class="author__education">{{ site.author.education }}</p>
   </div>
   <ul class="author__links" aria-label="Contact and profiles">
     <li><a href="mailto:{{ site.author.email }}" itemprop="email">Email</a></li>

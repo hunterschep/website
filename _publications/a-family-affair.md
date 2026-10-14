@@ -10,6 +10,4 @@ excerpt: "Co-authored work on transfer effects in automatic speech recognition f
 citation: '“A Family Affair: Counterintuitive transfer effects in ASR for endangered languages.” Forthcoming in <cite>Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026)</cite>. Main Conference paper.'
 ---
 
-Co-authored research on transfer effects in automatic speech recognition for endangered languages, accepted to the EMNLP 2026 Main Conference.
-
-The paper and full author list will be added here when available.
+Co-authored work on transfer effects in automatic speech recognition for endangered languages. Accepted to the EMNLP 2026 Main Conference. Paper and full author list forthcoming.

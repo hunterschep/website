@@ -9,6 +9,4 @@ resources:
     url: https://pypi.org/project/tame-mt/
 ---
 
-A command-line tool and Python package for **training-aware machine translation evaluation**. Alongside translation quality, it measures how close test examples are to the training corpus.
-
-That helps make overlap and generalization easier to see, especially on small benchmarks. The package combines a Python interface with a Rust backend and is available on PyPI.
+Machine translation evaluation with training/test overlap and generalization diagnostics. Python interface, Rust backend.

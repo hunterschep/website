@@ -11,4 +11,4 @@ resources:
     url: https://github.com/FormosanBank/kakarayan
 ---
 
-The public search, learning, research, download, and API interface for **FormosanBank**. It turns the canonical corpus into something people can explore: a searchable query model, study tools, research downloads, and release-scoped data services.
+Search, learning tools, research downloads, and an API for FormosanBank.

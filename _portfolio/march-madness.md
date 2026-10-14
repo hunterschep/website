@@ -8,6 +8,4 @@ resources:
     url: https://github.com/hunterschep/march-madness
 ---
 
-A tournament prediction system combining season-reset Elo ratings, per-season Gaussian GLM team quality estimates, and XGBoost regression on point differential.
-
-Finished in the **top 20% of submissions**. An excuse to spend a little too much time thinking about basketball and probability.
+Tournament predictions using Elo ratings, Gaussian GLMs, and XGBoost. Finished in the **top 20% of submissions**.

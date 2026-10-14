@@ -1,19 +1,16 @@
 title: Hunter Scheppat
 name: Hunter Scheppat
-description: "Language technology, endangered-language research, and useful software. Hunter Scheppat's little corner of the internet."
+description: "Hunter Scheppat. Machine translation, endangered languages, and software."
 locale: en-US
-title_separator: "|"
 url: https://hunterschep.github.io
 baseurl: /website
 repository: hunterschep/website
-site_theme: default
 timezone: America/Los_Angeles
 
 author:
   name: Hunter Scheppat
   avatar: headshot.png
-  bio: "NLP researcher.<br>Software builder.<br>Associate Solutions Architect at AWS."
-  education: "Boston College ’26<br>CS + Management · <em>cum laude</em>"
+  bio: "Machine translation &amp; NLP<br>Amazon Web Services"
   email: hunterschep@gmail.com
   github: hunterschep
   googlescholar: https://scholar.google.com/citations?user=MsjRFU8AAAAJ&hl=en
@@ -42,16 +39,11 @@ defaults:
       path: ""
     values:
       layout: single
-      author_profile: true
-      comments: false
-      share: false
-      related: false
 
 include:
   - _pages
 exclude:
   - README.md
-  - ACADEMIC_PAGES_PLAN.md
   - LICENSE
   - Gemfile
   - Gemfile.lock
@@ -65,26 +57,11 @@ kramdown:
   hard_wrap: false
   auto_ids: true
 highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: compressed
-  quiet_deps: true
 
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
 
-atom_feed:
-  hide: true
-comments:
-  provider: false
-analytics:
-  provider: false
-breadcrumbs: false
-
 social:
-  type: Person
-  name: Hunter Scheppat
   links:
     - https://github.com/hunterschep
     - https://scholar.google.com/citations?user=MsjRFU8AAAAJ&hl=en

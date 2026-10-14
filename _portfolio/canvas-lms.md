@@ -8,4 +8,4 @@ resources:
     url: https://github.com/hunterschep/canvas-lms-codex-plugin
 ---
 
-A plugin with custom skills and an **MCP server** for programmatic access to course data and Canvas LMS workflows. It brings course information into the development workflow, with tools built around the LMS.
+Custom skills and an MCP server for Canvas LMS course data and workflows.

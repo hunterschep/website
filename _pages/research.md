@@ -4,13 +4,9 @@ permalink: /research/
 description: "Publications, talks, and research experience in low-resource machine translation and endangered-language technology."
 ---
 
-<p class="eyebrow">Endangered languages / machine translation / speech</p>
+My research focuses on low-resource machine translation, language documentation, data augmentation, pivot translation, and interactive machine learning.
 
-My research focuses on language technology for languages with very little training data. I’m particularly interested in **low-resource machine translation**, language documentation, data augmentation, pivot translation, and interactive machine learning.
-
-At the [AI4 Communication Sciences Lab](https://ai4commsci.github.io/), I work with Dr. Emily Prud’hommeaux on the Indigenous languages of Taiwan. My research has been supported by an NSF REU grant focused on Formosan language corpora.
-
-That means a mix of corpus work, synthetic data pipelines, model training, and evaluation. I work with mBART, NLLB, OpenNMT, Fairseq, and high-performance computing. The practical question behind it all: what can we build when the data is scarce?
+I work with Dr. Emily Prud’hommeaux at the [AI4 Communication Sciences Lab](https://ai4commsci.github.io/) on the Indigenous languages of Taiwan, supported by an NSF REU grant.
 
 ## Publications
 
@@ -42,11 +38,11 @@ That means a mix of corpus work, synthetic data pipelines, model training, and e
 ## Research experience
 
 <dl class="experience-list">
-  <div><dt>2026–present</dt><dd><strong>Post-graduate research assistant</strong><br>AI4 Communication Sciences Lab · MGH / Boston College / NSF<br>High-performance computing, machine translation, and automatic speech recognition.</dd></div>
-  <div><dt>2023–present</dt><dd><strong>Research assistant</strong><br>AI4 Communication Sciences Lab · MGH / Boston College / NSF<br>NSF REU-funded Formosan MT research. Synthetic data pipelines and evaluation of mBART, NLLB, and OpenNMT.</dd></div>
-  <div><dt>2023</dt><dd><strong>Research assistant</strong><br>Pushkin Project · Boston College<br>Behavioral experiments, JavaScript and Selenium testing, and OpenSSF compliance.</dd></div>
+  <div><dt>2026–present</dt><dd><strong>Post-graduate research assistant</strong><br>AI4 Communication Sciences Lab · MGH / Boston College / NSF</dd></div>
+  <div><dt>2023–present</dt><dd><strong>Research assistant</strong><br>AI4 Communication Sciences Lab · MGH / Boston College / NSF</dd></div>
+  <div><dt>2023</dt><dd><strong>Research assistant</strong><br>Pushkin Project · Boston College</dd></div>
 </dl>
 
 ## Teaching & community
 
-I taught **Data Structures** and served as president of the [Boston College Computer Science Society](https://bccss.dev/). I enjoy making the technical parts easier to get into, whether that means a class, a tutorial, or a tool someone can actually use.
+I taught Data Structures and served as president of the [Boston College Computer Science Society](https://bccss.dev/).

@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<div id="main" role="main" tabindex="-1">
-  {% include sidebar.html %}
+<main id="main" tabindex="-1">
+  <aside class="sidebar">{% include author-profile.html %}</aside>
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="{{ page.title | escape }}">
     {% if page.description or page.excerpt %}<meta itemprop="description" content="{{ page.description | default: page.excerpt | strip_html | escape }}">{% endif %}
@@ -32,4 +32,4 @@ layout: default
       </section>
     </div>
   </article>
-</div>
+</main>

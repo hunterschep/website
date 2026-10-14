@@ -19,8 +19,4 @@ resources:
     url: https://lrec.elra.info/lrec2026-main-273
 ---
 
-FormosanMT brings together **nearly 500,000 Formosan–Mandarin and Formosan–English sentence pairs** for machine translation across the Formosan language family.
-
-Alongside the corpora, we provide extraction and data preparation tools, a Traditional Chinese tokenizer compatible with NLLB, fine-tuning code, and trained NLLB and OpenNMT models. This work connects language documentation with the practical tools needed to train and evaluate translation systems.
-
-I presented the paper as an oral presentation at LREC 2026. The recording and conference page are linked below.
+Nearly **500,000 Formosan–Mandarin and Formosan–English sentence pairs**, with extraction tools, a Traditional Chinese tokenizer, fine-tuning code, and trained NLLB and OpenNMT models.
