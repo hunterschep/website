@@ -26,9 +26,7 @@ jobs:
         env:
           JEKYLL_ENV: production
       - name: Check generated pages and links
-        run: |
-          python3 scripts/check_site.py
-          node --check assets/js/flow-field.js
+        run: python3 scripts/check_site.py
       - uses: actions/upload-pages-artifact@v5.0.0
 
   deploy:

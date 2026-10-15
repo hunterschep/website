@@ -2,11 +2,9 @@
 <html lang="{{ site.locale | slice: 0,2 }}">
   <head>{% include head.html %}</head>
   <body>
-    <canvas class="flow-field" aria-hidden="true"></canvas>
     <a class="skip-link" href="#main">Skip to content</a>
     {% include masthead.html %}
     {{ content }}
     <footer class="site-footer">{% include footer.html %}</footer>
-    <script src="{{ '/assets/js/flow-field.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
   </body>
 </html>
