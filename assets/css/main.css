@@ -1,6 +1,6 @@
 :root {
   --maroon: #98002E;
-  --gold: #B29D6C;
+  --gold: #85703A;
   --paper: #fbf8f1;
   --ink: #222;
   --rule: #d9cdb3;
@@ -17,7 +17,7 @@ body {
   margin: 32px auto;
   padding: 0 24px;
   color: var(--ink);
-  font: 16px/1.6 Georgia, "Times New Roman", serif;
+  font: 16px/1.6 Calibri, Carlito, "Segoe UI", Arial, sans-serif;
 }
 
 a { color: var(--gold); text-decoration: underline; overflow-wrap: anywhere; }
