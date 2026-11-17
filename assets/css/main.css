@@ -1,12 +1,12 @@
 :root {
-  --maroon: #8a100b;
-  --link: #0066FF;
+  --maroon: #98002E;
+  --gold: #B29D6C;
   --rule: #dde3e7;
   --muted: #596777;
 }
 
 * { box-sizing: border-box; }
-html { background: #fff; }
+html { background: #fff; scrollbar-gutter: stable; }
 body {
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@ body {
   font: 14px/1.65 Tahoma, Verdana, sans-serif;
 }
 
-a { color: var(--link); text-decoration: none; overflow-wrap: anywhere; }
+a { color: var(--gold); text-decoration: none; overflow-wrap: anywhere; }
 a:hover { text-decoration: underline; }
 a:focus-visible { outline: 2px solid var(--maroon); outline-offset: 3px; }
 p { margin: 0 0 14px; }
