@@ -58,7 +58,6 @@ li { margin-bottom: 5px; }
 .author__links { margin: 0; padding: 0; list-style: none; font-size: 14px; }
 .author__links a { display: inline-block; padding: 3px 0; text-decoration: none; }
 .author__links a:hover { text-decoration: underline; }
-.author__email { display: inline-block; padding: 3px 0; color: var(--muted); }
 .page__title { overflow-wrap: anywhere; }
 .record-meta, .record-date, .section-link, .resource-links { color: var(--muted); font-size: 14px; }
 .record-meta { margin: 0 0 4px; font-style: italic; }
