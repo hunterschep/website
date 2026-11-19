@@ -40,7 +40,6 @@ def quantize_signed(vector, scale):
 
 
 def main():
-    torch.manual_seed(0)
     tokenizer = AutoTokenizer.from_pretrained(MODEL, revision=REVISION)
     model = AutoModelForCausalLM.from_pretrained(
         MODEL, revision=REVISION, dtype=torch.float32, attn_implementation="eager"
@@ -118,17 +117,17 @@ def main():
             "lens": {"text": lens_tokens, "p": lens_top, "chosen": lens_chosen},
         })
 
-    # Input embeddings of the visitor's tokens, on one shared color scale.
+    # Input embeddings of the visitor's tokens and the reply (without the
+    # end-of-turn token), in that order, on one shared color scale.
     user_positions = [i for i, token in enumerate(context) if token["part"] == "user"]
     table = model.get_input_embeddings().weight
-    vectors = [table[context[i]["id"]] for i in user_positions]
+    vectors = [table[context[i]["id"]] for i in user_positions] + [table[i] for i in generated[:-1]]
     scale = torch.cat(vectors).abs().quantile(0.99).item()
     embeddings = {
         "scale": round(scale, 4),
         "tokens": [
             {
                 "head": [round(v, 4) for v in vector[:6].tolist()],
-                "norm": round(vector.norm().item(), 3),
                 "cells": encode_bytes(quantize_signed(vector, scale)),
             }
             for vector in vectors
@@ -157,7 +156,6 @@ def main():
             "kv_heads": config.num_key_value_heads,
             "hidden": config.hidden_size,
             "vocab": len(tokenizer),
-            "embedding_rows": table.shape[0],
             "transformers": transformers.__version__,
             "torch": torch.__version__,
         },

@@ -1,0 +1,55 @@
+---
+title: How this works
+permalink: /inference/
+description: "How the animation on my home page works: a real run of a small language model on my name."
+---
+{% assign trace = site.data.inference %}
+<p>The animation on my <a href="{{ '/' | relative_url }}">home page</a> is a real run of <a href="https://huggingface.co/{{ trace.model.name }}">{{ trace.model.name | split: '/' | last }}</a>, a small open-weight model, on my name. Every token, vector, attention weight, and probability in it comes from that run. I only picked the timing.</p>
+
+<h2 id="tokens">1. Tokens</h2>
+<p>The model reads tokens, not letters. “hunter” is one token. “scheppat” is three.</p>
+<div class="token-row" id="user-tokens"></div>
+<p>It also reads an instruction I wrote, inside a chat template:</p>
+<blockquote class="system-prompt"><p>{{ trace.system }}</p></blockquote>
+<details class="context">
+  <summary>All <span data-fill="context"></span> tokens it reads</summary>
+  <div class="context__tokens" id="context"></div>
+</details>
+
+<h2 id="vectors">2. Vectors</h2>
+<p>Each token ID picks a row of <span data-fill="hidden"></span> learned numbers. These are the striped columns in the animation. Maroon is above zero, blue below.</p>
+<div class="embeddings" id="embedding-grid"></div>
+
+<h2 id="layers">3. Layers</h2>
+<p>The columns pass through <span data-fill="layers"></span> layers. In each one, attention lets a token pull from the tokens before it. The arcs in the animation are these weights. Here they are for every token, averaged over <span data-fill="heads"></span> heads:</p>
+<div class="layer-controls">
+  <label for="layer">Layer</label>
+  <input type="range" id="layer" min="1" value="1">
+  <output for="layer" id="layer-value"></output>
+  <button type="button" class="button" id="layer-play">Play</button>
+</div>
+<div class="heatmap-wrap"><table class="heatmap" id="heatmap"></table></div>
+<p class="figure-note">The first column is attention to the instruction and template. Shading uses a square-root scale. Hover a square for its value.</p>
+
+<h2 id="next-token">4. Next token</h2>
+<p>After the last layer, the model scores every token it knows and takes the top one. Then it appends that token and runs again. That’s the loop in the animation.</p>
+<div class="steps" id="steps" role="group" aria-label="Reply tokens"></div>
+<p id="closest"></p>
+<h3 class="figure-title" id="candidates-title">Top candidates</h3>
+<div class="bars" id="bars"></div>
+<p class="figure-note" id="bars-note"></p>
+<h3 class="figure-title">Best guess at each layer</h3>
+<p>The word riding the scan line is the model’s best guess so far. For the first word it passes through 你想, Chinese for “you want,” before landing on “What.”</p>
+<div class="lens" id="lens"></div>
+<p>It stops when it picks <code>&lt;|im_end|&gt;</code>, its end-of-turn token.</p>
+
+<h2 id="about-run">About the run</h2>
+<dl class="experience-list run-facts">
+  <div><dt>Model</dt><dd><a href="https://huggingface.co/{{ trace.model.name }}/tree/{{ trace.model.revision }}">{{ trace.model.name }}</a>, <span data-fill="parameters"></span> parameters</dd></div>
+  <div><dt>Decoding</dt><dd>Greedy, float32</dd></div>
+  <div><dt>Code</dt><dd><a href="https://github.com/{{ site.repository }}/blob/main/scripts/trace_inference.py">trace_inference.py</a></dd></div>
+</dl>
+<p>There’s no server. The site replays one recording, so it can’t answer new questions.</p>
+
+<div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+<script type="module" src="{{ '/assets/js/inference.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
