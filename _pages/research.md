@@ -8,7 +8,7 @@ My research focuses on low-resource machine translation, language documentation,
 
 I work with Dr. Emily Prud’hommeaux at the [AI4 Communication Sciences Lab](https://ai4commsci.github.io/) on the Indigenous languages of Taiwan, supported by an NSF REU grant.
 
-## Publications
+## 1. Publications
 
 <p class="section-link">Also on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.</p>
 
@@ -23,7 +23,7 @@ I work with Dr. Emily Prud’hommeaux at the [AI4 Communication Sciences Lab](ht
 {% endfor %}
 {% endfor %}
 
-## Talks
+## 2. Talks
 
 <ul class="talk-list">
 {% assign talks = site.talks | sort: "order" | reverse %}
@@ -35,7 +35,7 @@ I work with Dr. Emily Prud’hommeaux at the [AI4 Communication Sciences Lab](ht
 {% endfor %}
 </ul>
 
-## Research experience
+## 3. Research experience
 
 <dl class="experience-list">
   <div><dt>2026–present</dt><dd><strong>Post-graduate research assistant</strong><br>AI4 Communication Sciences Lab · MGH / Boston College / NSF</dd></div>
@@ -43,6 +43,6 @@ I work with Dr. Emily Prud’hommeaux at the [AI4 Communication Sciences Lab](ht
   <div><dt>2023</dt><dd><strong>Research assistant</strong><br>Pushkin Project · Boston College</dd></div>
 </dl>
 
-## Teaching & community
+## 4. Teaching & community
 
 I taught Data Structures and served as president of the [Boston College Computer Science Society](https://bccss.dev/).

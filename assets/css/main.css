@@ -1,7 +1,7 @@
 :root {
   --maroon: #98002E;
   --gold: #85703A;
-  --paper: #fbf8f1;
+  --paper: #fff;
   --ink: #222;
   --rule: #d9cdb3;
   --muted: #6b6257;
@@ -12,7 +12,7 @@ html { background: var(--paper); scrollbar-gutter: stable; }
 body {
   display: flex;
   flex-direction: column;
-  max-width: 900px;
+  max-width: 1120px;
   min-height: calc(100vh - 64px);
   margin: 32px auto;
   padding: 0 24px;
@@ -21,6 +21,7 @@ body {
 }
 
 a { color: var(--gold); text-decoration: underline; overflow-wrap: anywhere; }
+a:visited { color: var(--maroon); }
 a:hover { color: var(--maroon); }
 a:focus-visible { outline: 2px solid var(--maroon); outline-offset: 3px; }
 p { margin: 0 0 14px; }
@@ -55,6 +56,7 @@ li { margin-bottom: 5px; }
 .author__links { margin: 0; padding: 0; list-style: none; font-size: 14px; }
 .author__links a { display: inline-block; padding: 3px 0; text-decoration: none; }
 .author__links a:hover { text-decoration: underline; }
+.author__email { display: inline-block; padding: 3px 0; color: var(--muted); }
 .page__title { overflow-wrap: anywhere; }
 .record-meta, .record-date, .section-link, .resource-links { color: var(--muted); font-size: 14px; }
 .record-meta { margin: 0 0 4px; font-style: italic; }
@@ -62,8 +64,10 @@ li { margin-bottom: 5px; }
 .resource-links { margin: 7px 0 0; }
 .section-link { margin: 14px 0 0; }
 
-.publication-record { margin-bottom: 18px; }
+.page__content { counter-reset: publication; }
+.publication-record { counter-increment: publication; margin-bottom: 18px; }
 .publication-record h3 { margin: 0 0 5px; font-size: 16px; }
+.publication-record h3::before { content: "[" counter(publication) "] "; color: var(--muted); }
 .citation { font-size: 15px; }
 .selected-software { margin: 0; }
 .news-list, .experience-list { margin: 0; }
