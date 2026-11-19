@@ -35,7 +35,7 @@ def check_site(root, site_url):
     pages = {path: Page(path.read_text()) for path in root.rglob("*.html")}
     errors = []
 
-    for required in ["index.html", "research/index.html", "software/index.html", "writing/index.html", "404.html"]:
+    for required in ["index.html", "research/index.html", "software/index.html", "writing/index.html", "inference/index.html", "404.html"]:
         if root / required not in pages:
             errors.append(f"Missing page: {required}")
 

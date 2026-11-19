@@ -19,6 +19,7 @@ Open `http://localhost:4000/website/`.
 - `_pages/`: main pages.
 - `_publications/`, `_talks/`, `_portfolio/`: individual records.
 - `_data/`: navigation and news.
+- `_data/inference.json`: the recorded model run behind the home page animation and `/inference/`. Regenerate it with `uv run scripts/trace_inference.py`.
 - `_config.yml`: profile and site settings.
 - `assets/css/main.css`: all styling.
 

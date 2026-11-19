@@ -4,6 +4,8 @@ permalink: /
 description: "Hunter Scheppat. Associate Solutions Architect at AWS and researcher in endangered-language machine translation."
 ---
 
+{% include inference-hero.html %}
+
 I’m an Associate Solutions Architect at [Amazon Web Services](https://aws.amazon.com/) and a researcher working on machine translation for endangered languages. My research focuses on the Formosan languages of Taiwan with Dr. Emily Prud’hommeaux and the [AI4 Communication Sciences Lab](https://ai4commsci.github.io/).
 
 AWS Certified: Solutions Architect – Associate, Developer – Associate, AI Practitioner, and Cloud Practitioner.

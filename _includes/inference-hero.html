@@ -1,0 +1,17 @@
+{% assign trace = site.data.inference %}
+{% assign cv = site.data.navigation.main | where: "title", "CV" | first %}
+<section class="hero" id="hero" aria-label="Animation of a language model reading “{{ trace.prompt }}” and writing its reply">
+  <div class="hero__stage">
+    <canvas class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="hero__answer">
+      <span class="hero__prompt">{{ trace.prompt }}</span>
+      <span class="hero__reply">{{ trace.reply }}</span>
+      <span class="hero__links">Ask about my <a href="{{ '/research/' | relative_url }}">research</a>, <a href="{{ '/software/' | relative_url }}">software</a>, <a href="{{ '/writing/' | relative_url }}">writing</a>, or <a href="{{ cv.url | escape }}">CV</a>.</span>
+    </div>
+  </div>
+  <p class="hero__controls">
+    <button type="button" class="hero__toggle" hidden>Skip</button>
+    <a href="{{ '/inference/' | relative_url }}">How this works</a>
+  </p>
+</section>
+<script type="module" src="{{ '/assets/js/inference-animation.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
