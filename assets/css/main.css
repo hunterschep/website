@@ -5,6 +5,8 @@
   --ink: #222;
   --rule: #d9cdb3;
   --muted: #6b6257;
+  --link: #0000ee;
+  --link-visited: #551a8b;
 }
 
 * { box-sizing: border-box; }
@@ -20,8 +22,8 @@ body {
   font: 16px/1.6 Calibri, Carlito, "Segoe UI", Arial, sans-serif;
 }
 
-a { color: var(--gold); text-decoration: underline; overflow-wrap: anywhere; }
-a:visited { color: var(--maroon); }
+a { color: var(--link); text-decoration: underline; overflow-wrap: anywhere; }
+a:visited { color: var(--link-visited); }
 a:hover { color: var(--maroon); }
 a:focus-visible { outline: 2px solid var(--maroon); outline-offset: 3px; }
 p { margin: 0 0 14px; }
