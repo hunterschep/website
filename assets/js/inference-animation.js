@@ -14,6 +14,7 @@ const color = (name) => css.getPropertyValue(name).trim();
 const rgb = (name) => color(name).match(/[0-9a-f]{2}/gi).map((hex) => parseInt(hex, 16));
 const ink = { maroon: color("--maroon"), text: color("--ink"), muted: color("--muted"), rule: color("--rule"), paper: color("--paper"), bar: color("--bar") };
 const mono = color("--mono");
+const glow = rgb("--maroon").join(", ");
 const sans = getComputedStyle(document.body).fontFamily;
 
 const clamp = (x) => Math.min(Math.max(x, 0), 1);
@@ -54,7 +55,8 @@ function animate(trace) {
   // the chat template's last token, which predicts the first reply token.
   const firstReplyRow = trace.context.length - trace.attention.first;
 
-  // Timeline in seconds. The first pass is slow; near ties get extra time.
+  // Timeline in seconds. The first pass is slow, near ties get extra time,
+  // and the loop speeds up as the reply grows.
   const timeline = [];
   let total = 0;
   const add = (kind, duration, step) => {
@@ -63,31 +65,36 @@ function animate(trace) {
   };
   add("type", 1);
   add("split", 0.9);
-  add("embed", 0.8);
+  add("embed", 1.1);
   steps.forEach((step, s) => {
     const close = step.top[0].p - step.top[1].p < 0.05;
-    add("scan", s === 0 ? 1.8 : close ? 0.5 : 0.2, s);
-    add("bars", s === 0 ? 0.6 : close ? 1.2 : 0.16, s);
-    if (!isSpecial(step.text)) add("fly", s === 0 ? 0.45 : 0.22, s);
+    const pace = s / (steps.length - 1);
+    add("scan", s === 0 ? 1.8 : close ? 0.55 : lerp(0.26, 0.14, pace), s);
+    add("bars", s === 0 ? 0.6 : close ? 1.2 : lerp(0.2, 0.1, pace), s);
+    if (!isSpecial(step.text)) add("fly", s === 0 ? 0.45 : lerp(0.26, 0.18, pace), s);
   });
-  add("hold", 0.3);
+  add("decode", 0.9);
+  add("hold", 0.25);
 
   function stateAt(time) {
-    const state = { typed: 0, split: 0, embed: 0, appended: 0, pass: null, bars: null, fly: null };
+    const state = { typed: 0, split: 0, embed: 0, appended: 0, landed: Infinity, pass: null, bars: null, fly: null, decode: 0 };
     for (const phase of timeline) {
       if (time < phase.start) break;
       const k = clamp((time - phase.start) / (phase.end - phase.start));
       if (phase.kind === "type") state.typed = k;
       else if (phase.kind === "split") state.split = ease(k);
-      else if (phase.kind === "embed") state.embed = ease(k);
+      else if (phase.kind === "embed") state.embed = k;
       else if (phase.kind === "scan") {
         state.pass = { step: phase.step, k, active: k < 1 };
         state.bars = null;
       } else if (phase.kind === "bars") state.bars = { step: phase.step, k: ease(k) };
       else if (phase.kind === "fly") {
         if (k < 1) state.fly = { step: phase.step, k: ease(k) };
-        else state.appended++;
-      }
+        else {
+          state.appended++;
+          state.landed = time - phase.end;
+        }
+      } else if (phase.kind === "decode") state.decode = k;
     }
     return state;
   }
@@ -206,7 +213,8 @@ function animate(trace) {
     ctx.imageSmoothingEnabled = false;
     tokens.slice(0, present).forEach((token, index) => {
       const slot = slots[index];
-      const grown = token.user ? state.embed : 1;
+      // The prompt's vectors drop in one after another.
+      const grown = token.user ? ease(clamp((state.embed - index * 0.15) / 0.55)) : 1;
       if (grown <= 0) return;
       const x = slot.x + 2;
       const w = slot.w - 4;
@@ -274,6 +282,11 @@ function animate(trace) {
         ctx.fillText(`layer ${layer + 1}`, slots[0].x - 6, y);
         ctx.textAlign = "left";
       }
+      const wake = ctx.createLinearGradient(0, y - 28, 0, y);
+      wake.addColorStop(0, `rgba(${glow}, 0)`);
+      wake.addColorStop(1, `rgba(${glow}, 0.14)`);
+      ctx.fillStyle = wake;
+      ctx.fillRect(view.start, y - 28, right - view.start, 28);
       ctx.shadowColor = ink.maroon;
       ctx.shadowBlur = 8;
       ctx.fillStyle = ink.maroon;
@@ -300,17 +313,20 @@ function animate(trace) {
       ctx.fillText(typed, view.start + 5, rowY);
       if (Math.floor(time * 2.5) % 2 === 0) ctx.fillRect(view.start + 6 + ctx.measureText(typed).width, rowY - font / 2, 1.5, font);
     } else {
+      const replyCount = tokens.length - user.length;
       tokens.slice(0, present).forEach((token, index) => {
         const slot = slots[index];
         const fade = token.user ? state.split : 1;
         const x = token.user ? lerp(view.prompt[index], slot.x + 5, state.split) : slot.x + 5;
-        ctx.globalAlpha = fade * (token.user ? 0.07 : 0.05);
-        ctx.fillStyle = token.user ? ink.maroon : ink.text;
+        // At the end, the reply's tokens light up in order as they're joined into text.
+        const decoded = !token.user && state.decode * replyCount > index - user.length;
+        ctx.globalAlpha = decoded ? 0.14 : fade * (token.user ? 0.07 : 0.05);
+        ctx.fillStyle = token.user || decoded ? ink.maroon : ink.text;
         ctx.beginPath();
         ctx.roundRect(x - 5, chip.top, slot.w, chip.height, 3);
         ctx.fill();
         ctx.globalAlpha = 1;
-        ctx.fillStyle = token.user ? ink.maroon : ink.text;
+        ctx.fillStyle = token.user || decoded ? ink.maroon : ink.text;
         ctx.font = `${font}px ${mono}`;
         ctx.fillText(token.label, x, rowY);
         ctx.globalAlpha = fade;
@@ -319,6 +335,19 @@ function animate(trace) {
         ctx.fillText(String(token.id), x, idY);
         ctx.globalAlpha = 1;
       });
+
+      // A short pulse where the newest token lands.
+      if (state.landed < 0.45) {
+        const slot = slots[present - 1];
+        const k = state.landed / 0.45;
+        ctx.globalAlpha = 1 - k;
+        ctx.strokeStyle = ink.maroon;
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.roundRect(slot.x - 4 * k, chip.top - 4 * k, slot.w + 8 * k, chip.height + 8 * k, 3 + 4 * k);
+        ctx.stroke();
+        ctx.globalAlpha = 1;
+      }
     }
     ctx.restore();
 
@@ -358,7 +387,7 @@ function animate(trace) {
 
     // Where the run is: one stage lit at a time.
     let stage = 0;
-    if (time >= total) stage = 5;
+    if (time >= total || state.decode > 0) stage = 5;
     else if (pass?.active) stage = 3;
     else if (pass) stage = 4;
     else if (state.embed > 0) stage = 2;
@@ -386,6 +415,7 @@ function animate(trace) {
   let time = 0;
   let last = null;
   let frame = 0;
+  let waiting = null;
   function tick(now) {
     if (last !== null) time += Math.min((now - last) / 1000, 0.05);
     last = now;
@@ -394,6 +424,7 @@ function animate(trace) {
     frame = requestAnimationFrame(tick);
   }
   function play() {
+    waiting?.disconnect();
     cancelAnimationFrame(frame);
     time = 0;
     last = null;
@@ -403,6 +434,7 @@ function animate(trace) {
     frame = requestAnimationFrame(tick);
   }
   function finish() {
+    waiting?.disconnect();
     cancelAnimationFrame(frame);
     time = total;
     draw(total);
@@ -420,7 +452,15 @@ function animate(trace) {
   toggle.hidden = false;
   hero.classList.add("is-ready");
   if (reduceMotion) finish();
-  else play();
+  else {
+    // Wait until the animation is on screen, so nobody misses the start.
+    hero.classList.add("is-playing");
+    draw(0);
+    waiting = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) play();
+    }, { threshold: 0.4 });
+    waiting.observe(canvas);
+  }
 }
 
 // If the recording can't load, the static reply in the markup stays in place.
