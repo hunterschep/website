@@ -89,6 +89,9 @@ li { margin-bottom: 5px; }
 .project-record h2 { margin: 0 0 4px; padding: 0; border: 0; font-size: 18px; font-variant: normal; letter-spacing: 0; }
 .project-record p { margin-bottom: 7px; }
 .project-record .record-meta { font-size: 13px; }
+.contributions { margin: 0; }
+.contributions img { display: block; width: 100%; height: auto; max-width: 663px; }
+.contributions figcaption { margin-top: 6px; color: var(--muted); font-size: 13px; text-align: center; }
 .site-footer { padding-top: 12px; border-top: 1px solid var(--gold); color: var(--muted); font-size: 13px; text-align: center; }
 .site-footer p { margin: 0; }
 .skip-link { position: absolute; left: -10000px; }

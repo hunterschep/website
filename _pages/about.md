@@ -30,6 +30,13 @@ I graduated *cum laude* from [Boston College](https://www.bc.edu/) in 2026 with 
 
 <p class="section-link"><a href="{{ '/software/' | relative_url }}">More projects</a></p>
 
+## Code contributions
+
+<figure class="contributions">
+  <img src="https://ghchart.rshah.org/hunterschep" alt="GitHub contribution chart for hunterschep over the past year" width="663" height="104" loading="lazy">
+  <figcaption>My code contributions to repos over the year. Chart by <a href="https://ghchart.rshah.org/">ghchart.rshah.org</a>.</figcaption>
+</figure>
+
 ## News
 
 <dl class="news-list">
