@@ -37,7 +37,7 @@ li { margin-bottom: 5px; }
 
 .masthead { border-bottom: 3px double var(--maroon); }
 .masthead__inner-wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 10px 24px; padding: 0 0 12px; }
-.site-name { color: var(--maroon); font-size: 32px; line-height: 1.2; text-decoration: none; }
+.site-name, .site-name:visited { color: var(--maroon); font-size: 32px; line-height: 1.2; text-decoration: none; }
 .masthead__menu ul { display: flex; flex-wrap: wrap; margin: 0; padding: 0; list-style: none; font-variant: small-caps; }
 .masthead__menu li { margin: 0; }
 .masthead__menu li + li::before { content: "|"; padding: 0 10px; color: var(--gold); }
