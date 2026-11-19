@@ -2,7 +2,7 @@
 title: Kalshi trading bots
 order: 5
 stack: Python / automation / cloud deployment
-excerpt: "Two autonomous event-market trading bots running on Oracle compute."
+excerpt: "Two bots that trade event markets on their own, running on Oracle Cloud."
 ---
 
-Two autonomous event-market trading bots running on Oracle compute. Source available upon request.
+Two bots that trade event markets on their own, running on Oracle Cloud. Source on request.

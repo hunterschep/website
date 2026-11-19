@@ -4,7 +4,7 @@ permalink: /writing/
 description: "Writing and other work by Hunter Scheppat."
 ---
 
-Tutorials and essays on machine learning and NLP.
+Tutorials and essays, mostly on ML and NLP.
 
 ## Recent writing
 

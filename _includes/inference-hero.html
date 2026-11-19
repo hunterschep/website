@@ -1,11 +1,12 @@
 {% assign trace = site.data.inference %}
 {% assign cv = site.data.navigation.main | where: "title", "CV" | first %}
+{% assign reply = trace.reply | split: site.author.name %}
 <section class="hero" id="hero" aria-label="Animation of a language model reading “{{ trace.prompt }}” and writing its reply">
   <div class="hero__stage">
     <canvas class="hero__canvas" aria-hidden="true"></canvas>
     <div class="hero__answer">
       <span class="hero__prompt">{{ trace.prompt }}</span>
-      <span class="hero__reply">{{ trace.reply }}</span>
+      <span class="hero__reply">{{ reply[0] }}<s class="hero__name">{{ site.author.name }}</s> <ins class="hero__me">me</ins>{{ reply[1] }}</span>
       <span class="hero__links">Ask about my <a href="{{ '/research/' | relative_url }}">research</a>, <a href="{{ '/software/' | relative_url }}">software</a>, <a href="{{ '/writing/' | relative_url }}">writing</a>, or <a href="{{ cv.url | escape }}">CV</a>.</span>
     </div>
   </div>

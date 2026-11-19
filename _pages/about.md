@@ -1,25 +1,29 @@
 ---
 title: About
 permalink: /
+hide_title: true
 description: "Hunter Scheppat. Associate Solutions Architect at AWS and researcher in endangered-language machine translation."
 ---
 
 {% include inference-hero.html %}
 
-I’m an Associate Solutions Architect at [Amazon Web Services](https://aws.amazon.com/) and a researcher working on machine translation for endangered languages. My research focuses on the Formosan languages of Taiwan with Dr. Emily Prud’hommeaux and the [AI4 Communication Sciences Lab](https://ai4commsci.github.io/).
+I’m an Associate Solutions Architect at [Amazon Web Services](https://aws.amazon.com/). I also do research on machine translation for endangered languages.
 
-AWS Certified: Solutions Architect – Associate, Developer – Associate, AI Practitioner, and Cloud Practitioner.
+<dl class="experience-list facts">
+  <div><dt>Research</dt><dd>Formosan languages of Taiwan, with Dr. Emily Prud’hommeaux at the <a href="https://ai4commsci.github.io/">AI4 Communication Sciences Lab</a></dd></div>
+  <div><dt>Education</dt><dd><a href="https://www.bc.edu/">Boston College</a>, 2026, <em>cum laude</em>. B.A. Computer Science, B.S. Management</dd></div>
+  <div><dt>Certified</dt><dd>AWS Solutions Architect Associate, Developer Associate, AI Practitioner, Cloud Practitioner</dd></div>
+  <div><dt>Previously</dt><dd><a href="https://pushkin-consortium.github.io/pushkin/4.2/">Pushkin Project</a>, Data Structures teaching, president of the <a href="https://bccss.dev/">Computer Science Society</a></dd></div>
+</dl>
 
-I graduated *cum laude* from [Boston College](https://www.bc.edu/) in 2026 with a B.A. in Computer Science and a B.S. in Management. Previously: [Pushkin Project](https://pushkin-consortium.github.io/pushkin/4.2/), Data Structures teaching, and president of the [Computer Science Society](https://bccss.dev/).
-
-## Selected publications
+## Selected papers
 
 {% assign papers = site.publications | where: "featured", true | sort: "order" | reverse %}
 {% for paper in papers %}
 {% include publication.html item=paper compact=true %}
 {% endfor %}
 
-<p class="section-link"><a href="{{ '/research/' | relative_url }}">All publications and talks</a></p>
+<p class="section-link"><a href="{{ '/research/' | relative_url }}">All papers and talks</a></p>
 
 ## Software
 
@@ -32,11 +36,11 @@ I graduated *cum laude* from [Boston College](https://www.bc.edu/) in 2026 with 
 
 <p class="section-link"><a href="{{ '/software/' | relative_url }}">More projects</a></p>
 
-## Code contributions
+## This year on GitHub
 
 <figure class="contributions">
   <img src="https://ghchart.rshah.org/hunterschep" alt="GitHub contribution chart for hunterschep over the past year" width="663" height="104" loading="lazy">
-  <figcaption>My code contributions to repos over the year. Chart by <a href="https://ghchart.rshah.org/">ghchart.rshah.org</a>.</figcaption>
+  <figcaption>Chart by <a href="https://ghchart.rshah.org/">ghchart.rshah.org</a>.</figcaption>
 </figure>
 
 ## News
