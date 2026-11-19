@@ -8,7 +8,7 @@ layout: default
     {% if page.description or page.excerpt %}<meta itemprop="description" content="{{ page.description | default: page.excerpt | strip_html | escape }}">{% endif %}
     <div class="page__inner-wrap">
       <header>
-        <h1 class="page__title" itemprop="headline">{{ page.title }}</h1>
+        <h1 class="page__title{% if page.hide_title %} visually-hidden{% endif %}" itemprop="headline">{{ page.title }}</h1>
         {% if page.collection == 'publications' %}
           <p class="record-meta">{{ page.venue }} · {{ page.year }}{% if page.status %} · {{ page.status }}{% endif %}</p>
         {% elsif page.collection == 'talks' %}
