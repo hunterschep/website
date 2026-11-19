@@ -6,6 +6,8 @@ description: "Hunter Scheppat. Associate Solutions Architect at AWS and research
 
 I’m an Associate Solutions Architect at [Amazon Web Services](https://aws.amazon.com/) and a researcher working on machine translation for endangered languages. My research focuses on the Formosan languages of Taiwan with Dr. Emily Prud’hommeaux and the [AI4 Communication Sciences Lab](https://ai4commsci.github.io/).
 
+AWS Certified: Solutions Architect – Associate, Developer – Associate, AI Practitioner, and Cloud Practitioner.
+
 I graduated *cum laude* from [Boston College](https://www.bc.edu/) in 2026 with a B.A. in Computer Science and a B.S. in Management. Previously: [Pushkin Project](https://pushkin-consortium.github.io/pushkin/4.2/), Data Structures teaching, and president of the [Computer Science Society](https://bccss.dev/).
 
 ## Selected publications
