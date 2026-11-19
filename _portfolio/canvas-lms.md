@@ -2,10 +2,10 @@
 title: Canvas LMS Codex Plugin
 order: 3
 stack: React / MCP / Canvas LMS / developer tooling
-excerpt: "Programmatic access to course data and Canvas LMS workflows."
+excerpt: "Skills and an MCP server so an agent can work with Canvas course data."
 resources:
   - label: GitHub
     url: https://github.com/hunterschep/canvas-lms-codex-plugin
 ---
 
-Custom skills and an MCP server for Canvas LMS course data and workflows.
+Skills and an MCP server so an agent can read Canvas LMS course data and handle course workflows.

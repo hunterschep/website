@@ -4,7 +4,7 @@ permalink: /software/
 description: "Software projects by Hunter Scheppat."
 ---
 
-More on [GitHub](https://github.com/hunterschep).
+Things I’ve built. More on [GitHub](https://github.com/hunterschep).
 
 {% assign projects = site.portfolio | sort: "order" %}
 {% for project in projects %}

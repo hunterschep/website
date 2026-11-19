@@ -6,7 +6,7 @@ order: 3
 featured: true
 venue_short: LREC
 venue: Proceedings of the Fifteenth Language Resources and Evaluation Conference
-excerpt: "Nearly 500,000 sentence pairs for endangered-language machine translation, alongside tools and trained models for Formosan languages."
+excerpt: "Almost 500,000 sentence pairs for translating Formosan languages, plus the tools and models we built with them."
 citation: '<strong>Hunter Scheppat</strong>, Joshua K. Hartshorne, Sema Koc, Éric Le Ferrand, and Emily Prud’hommeaux. 2026. “FormosanMT: A Multilingual Parallel Corpus of the Formosan Language Family.” <cite>Proceedings of the Fifteenth Language Resources and Evaluation Conference</cite>, pp. 3445–3455.'
 resources:
   - label: Paper PDF

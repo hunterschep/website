@@ -4,9 +4,9 @@ permalink: /research/
 description: "Publications, talks, and research experience in low-resource machine translation and endangered-language technology."
 ---
 
-My research focuses on low-resource machine translation, language documentation, data augmentation, pivot translation, and interactive machine learning.
+I work on machine translation for languages that don’t have much data. That covers low-resource MT, language documentation, data augmentation, pivot translation, and interactive ML.
 
-I work with Dr. Emily Prud’hommeaux at the [AI4 Communication Sciences Lab](https://ai4commsci.github.io/) on the Indigenous languages of Taiwan, supported by an NSF REU grant.
+I do this with Dr. Emily Prud’hommeaux at the [AI4 Communication Sciences Lab](https://ai4commsci.github.io/), mostly on the Indigenous languages of Taiwan, with support from an NSF REU grant.
 
 ## 1. Publications
 
@@ -45,4 +45,4 @@ I work with Dr. Emily Prud’hommeaux at the [AI4 Communication Sciences Lab](ht
 
 ## 4. Teaching & community
 
-I taught Data Structures and served as president of the [Boston College Computer Science Society](https://bccss.dev/).
+I taught Data Structures and was president of the [Boston College Computer Science Society](https://bccss.dev/).

@@ -6,7 +6,7 @@ order: 1
 featured: true
 venue_short: ComputEL-8
 venue: Proceedings of ComputEL-8
-excerpt: "Training Amis translation systems from diverse sources, with synthetic English data and a closer look at what helps across translation directions."
+excerpt: "Training Amis translation models on mixed sources, and when synthetic English data helps."
 citation: '<strong>Hunter Scheppat</strong>, Joshua Hartshorne, Dylan Leddy, Éric Le Ferrand, and Emily Prud’hommeaux. 2025. “Integrating diverse corpora for training an endangered language machine translation system.” <cite>Proceedings of ComputEL-8</cite>, pp. 162–169.'
 resources:
   - label: Paper PDF
@@ -19,4 +19,4 @@ resources:
     url: https://huggingface.co/spaces/hunterschep/ami-zh-translation
 ---
 
-Amis–English and Amis–Mandarin translation using diverse corpora, synthetic English data, OpenNMT, and NLLB. Synthetic data helps when translating into English; effects vary by direction and model.
+Amis–English and Amis–Mandarin translation using diverse corpora, synthetic English data, OpenNMT, and NLLB. Synthetic data helps when translating into English. Beyond that, it depends on the direction and the model.
